@@ -1,0 +1,7 @@
+/* Single stylesheet entry; Vite inlines these imports into one CSS file. */
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './shell.css';
+@import './flows.css';
+@import './pages.css';

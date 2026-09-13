@@ -60,14 +60,18 @@ src/assets/favicon.svg                      seal favicon
 src/data/club.js meetings.js funds.js stories.js gallery.js portal-demo.js
 src/js/main.js                              site shell behaviour (pure exports, no side effects)
 src/js/site.js                              entry loaded on every page; calls init() from main.js
-src/js/lib/dates.js validate.js ref.js ics.js storage.js stepper.js form-errors.js meeting-cards.js
+src/js/lib/dates.js validate.js ref.js ics.js storage.js stepper.js form-errors.js summary.js meeting-cards.js
 src/js/flows/rsvp.js donate.js join.js contact.js portal.js lightbox.js
 src/js/pages/meetings.js give.js join.js contact.js portal.js gallery.js   ← per-page entry modules
+partials/lightbox.html                      photo viewer dialog (gallery + story pages)
 scripts/optimize-images.py                  photos.json → src/assets/img/*.webp
 scripts/photos.json                         copied from plan data
 scripts/render-photos.mjs                   writes gallery + story photo grids into HTML
+scripts/structured-data.mjs                 writes JSON-LD into each page head
 scripts/check-dist.mjs                      post-build site lint
 scripts/og.html                             OG image template (rendered by Chrome)
+scripts/qa-overflow.html                    dev-only horizontal-overflow harness (Task 16)
+.github/workflows/deploy.yml                test → build → check → deploy Pages (added end of Part 1, Ruling 7)
 public/robots.txt public/sitemap.xml public/og/og-default.png
 tests/*.test.js tests/helpers/load-page.js
 docs/AUDIT-MAP.md README.md .github/workflows/deploy.yml
