@@ -83,6 +83,7 @@
 .card__link::after { content: ''; position: absolute; inset: 0; }
 .card__link:focus-visible { outline: none; }
 .card__more { margin-top: var(--space-2); color: var(--navy); font-weight: 600; font-size: 0.95rem; }
+.card-list { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Meeting place cards ---------- */
 .place-list { display: grid; gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
@@ -238,5 +239,5 @@
   background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg);
 }
 .cta-band__panel--navy { background: var(--navy); border-color: var(--navy); color: var(--linen); }
-.cta-band__panel--navy h2 { color: var(--paper); }
+.cta-band__panel--navy h2, .cta-band__panel--navy h3 { color: var(--paper); }
 .cta-band__panel .btn { justify-self: start; margin-top: var(--space-2); }

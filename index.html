@@ -13,10 +13,179 @@
 <body data-page="home">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <section class="section">
+  <section class="home-hero">
+    <div class="container home-hero__inner">
+      <div class="home-hero__text">
+        <p class="eyebrow">The Exchange Club of Charleston · Est. 1923</p>
+        <h1>Unity for Service, since 1923.</h1>
+        <p class="lede">We’re a member club of the National Exchange Club — and the volunteers who run the Coastal Carolina Fair. What the fair raises comes back to the Lowcountry as scholarships, community grants and child-abuse prevention.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="meetings.html#rsvp">Visit a Thursday lunch</a>
+          <a class="btn btn--give" href="give.html">Give</a>
+        </div>
+      </div>
+      <div class="home-hero__media">
+        <figure class="photo home-hero__photo">
+          <img src="/src/assets/img/hero-members-960.webp"
+               srcset="/src/assets/img/hero-members-480.webp 480w, /src/assets/img/hero-members-960.webp 960w, /src/assets/img/hero-members-1600.webp 1600w"
+               sizes="(min-width: 900px) 45vw, 100vw" width="1600" height="1067" fetchpriority="high" decoding="async"
+               alt="Two club members in Coastal Carolina Fair shirts share a laugh at the 2026 Spring Festival">
+          <figcaption>Members at the 2026 Spring Festival.</figcaption>
+        </figure>
+        <aside class="fair-card home-hero__fair" aria-labelledby="fair-card-title">
+          <img class="fair-card__logo" src="/src/assets/img/fair-logo-120.webp" srcset="/src/assets/img/fair-logo-120.webp 1x, /src/assets/img/fair-logo-240.webp 2x" width="120" height="123" decoding="async" alt="Coastal Carolina Fair">
+          <p class="fair-card__eyebrow">Our flagship fundraiser</p>
+          <h2 class="fair-card__title" id="fair-card-title">Coastal Carolina Fair</h2>
+          <p class="fair-card__dates">Oct 29 – Nov 8, 2026</p>
+          <p class="fair-card__place">Exchange Park · Ladson, SC</p>
+          <p class="fair-card__countdown" data-countdown>Gates open Thursday, Oct 29 at 3:00 PM</p>
+          <div class="fair-card__actions">
+            <a class="ticket-btn" href="https://www.coastalcarolinafair.org/p/tickets--deals" rel="noopener">Get tickets <span class="ticket-btn__stub" aria-hidden="true">→</span></a>
+            <a class="fair-card__link" href="fair.html">About the fair</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" aria-labelledby="impact-title">
     <div class="container">
-      <h1>Unity for Service, since 1923.</h1>
-      <p class="lede">The Exchange Club of Charleston — the volunteers behind the Coastal Carolina Fair.</p>
+      <div class="section-head">
+        <p class="eyebrow">What the fair makes possible</p>
+        <h2 id="impact-title">What the fair gives back</h2>
+      </div>
+      <ul class="impact">
+        <li class="impact__item"><span class="impact__figure">$11M+</span><span class="impact__label">returned to the Lowcountry since 2003</span></li>
+        <li class="impact__item"><span class="impact__figure">$504K+</span><span class="impact__label">granted to 90+ local nonprofits and students after the latest fair</span></li>
+        <li class="impact__item"><span class="impact__figure">~$50K</span><span class="impact__label">set aside for scholarships every year</span></li>
+        <li class="impact__item"><span class="impact__figure">15,000+</span><span class="impact__label">volunteer hours given in 2023</span></li>
+      </ul>
+      <p class="impact__source">Figures published by the Coastal Carolina Fair and on the club’s Youth Programs page.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="programs-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Programs of Service</p>
+        <h2 id="programs-title">Four ways we serve</h2>
+      </div>
+      <ul class="grid grid--4 card-list">
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/program-child-abuse-960.webp" srcset="/src/assets/img/program-child-abuse-480.webp 480w, /src/assets/img/program-child-abuse-960.webp 960w, /src/assets/img/program-child-abuse-1600.webp 1600w" sizes="(min-width: 1100px) 25vw, (min-width: 600px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Club members with the executive director of the Dee Norton Child Advocacy Center"></div>
+          <div class="card__body">
+            <h3 class="card__title"><a class="card__link" href="programs.html#child-abuse-prevention">Prevention of Child Abuse</a></h3>
+            <p>Exchange’s national project since 1979. Locally, we back the Dee Norton Child Advocacy Center and Compass Harbor.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/program-americanism-960.webp" srcset="/src/assets/img/program-americanism-480.webp 480w, /src/assets/img/program-americanism-960.webp 960w, /src/assets/img/program-americanism-1600.webp 1600w" sizes="(min-width: 1100px) 25vw, (min-width: 600px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="A U.S. Marine is honored at the club’s National Defense luncheon"></div>
+          <div class="card__body">
+            <h3 class="card__title"><a class="card__link" href="programs.html#americanism">Americanism</a></h3>
+            <p>Freedom Shrines, flags for kids, and yearly honors for our military and for officers injured in the line of duty.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/program-youth-960.webp" srcset="/src/assets/img/program-youth-480.webp 480w, /src/assets/img/program-youth-960.webp 960w, /src/assets/img/program-youth-1600.webp 1600w" sizes="(min-width: 1100px) 25vw, (min-width: 600px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="A scholarship recipient receives her award from the club president"></div>
+          <div class="card__body">
+            <h3 class="card__title"><a class="card__link" href="programs.html#youth">Youth &amp; Scholarships</a></h3>
+            <p>About $50,000 a year in scholarships, plus Youth of the Year, A.C.E. and Young Citizenship awards.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/program-community-960.webp" srcset="/src/assets/img/program-community-480.webp 480w, /src/assets/img/program-community-960.webp 960w, /src/assets/img/program-community-1600.webp 1600w" sizes="(min-width: 1100px) 25vw, (min-width: 600px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Members in red fair shirts volunteering at the 2026 Spring Festival"></div>
+          <div class="card__body">
+            <h3 class="card__title"><a class="card__link" href="programs.html#community-service">Community Service</a></h3>
+            <p>Fair proceeds become grants for local nonprofits — and our members show up to do the work.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="meet-title">
+    <div class="container split">
+      <div class="section-head">
+        <p class="eyebrow">Guests welcome</p>
+        <h2 id="meet-title">Meet us on Thursday</h2>
+        <p class="lede">Lunch is at noon every Thursday at the Charleston Rifle Club, with a guest speaker on something that matters to Charleston.</p>
+        <p><a href="https://maps.google.com/?q=32.814137,-79.957306" rel="noopener">2221 Heriot St, Charleston, SC 29403</a></p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="meetings.html#rsvp">Reserve a guest seat</a>
+          <a class="btn btn--secondary" href="meetings.html">All meetings</a>
+        </div>
+      </div>
+      <ul class="place-list" data-meeting-list data-limit="3">
+        <li class="place-card"><p class="place-card__date" aria-hidden="true"><span class="place-card__month">SEP</span><span class="place-card__day">17</span></p><div class="place-card__body"><p class="place-card__title">Weekly Club Meeting</p><p class="place-card__meta"><time datetime="2026-09-17T12:00">Thursday, September 17, 2026</time> · 12:00 PM</p><p class="place-card__meta">Charleston Rifle Club</p><span class="place-card__tag">Guests welcome</span></div><a class="btn btn--secondary place-card__action" href="meetings.html#rsvp">Reserve a seat<span class="visually-hidden"> for Thursday, September 17, 2026</span></a></li>
+        <li class="place-card"><p class="place-card__date" aria-hidden="true"><span class="place-card__month">OCT</span><span class="place-card__day">1</span></p><div class="place-card__body"><p class="place-card__title">Weekly Club Meeting</p><p class="place-card__meta"><time datetime="2026-10-01T12:00">Thursday, October 1, 2026</time> · 12:00 PM</p><p class="place-card__meta">Charleston Rifle Club</p><span class="place-card__tag">Guests welcome</span></div><a class="btn btn--secondary place-card__action" href="meetings.html#rsvp">Reserve a seat<span class="visually-hidden"> for Thursday, October 1, 2026</span></a></li>
+        <li class="place-card"><p class="place-card__date" aria-hidden="true"><span class="place-card__month">OCT</span><span class="place-card__day">8</span></p><div class="place-card__body"><p class="place-card__title">Weekly Club Meeting</p><p class="place-card__meta"><time datetime="2026-10-08T12:00">Thursday, October 8, 2026</time> · 12:00 PM</p><p class="place-card__meta">Charleston Rifle Club</p><span class="place-card__tag">Guests welcome</span></div><a class="btn btn--secondary place-card__action" href="meetings.html#rsvp">Reserve a seat<span class="visually-hidden"> for Thursday, October 8, 2026</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="latest-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Stories</p>
+        <h2 id="latest-title">Latest from the club</h2>
+      </div>
+      <ul class="grid grid--3 card-list">
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/story-workday-960.webp" srcset="/src/assets/img/story-workday-480.webp 480w, /src/assets/img/story-workday-960.webp 960w, /src/assets/img/story-workday-1600.webp 1600w" sizes="(min-width: 760px) 33vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Members with buckets and tools at the June 6, 2026 fair workday at Exchange Park"></div>
+          <div class="card__body">
+            <p class="card__meta"><time datetime="2026-06-06">June 6, 2026</time></p>
+            <h3 class="card__title"><a class="card__link" href="story-fair-workday-2026.html">Fair workday at Exchange Park</a></h3>
+            <p>Members spent a Saturday at Exchange Park getting the grounds ready for the fall fair.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/story-cadets-960.webp" srcset="/src/assets/img/story-cadets-480.webp 480w, /src/assets/img/story-cadets-960.webp 960w, /src/assets/img/story-cadets-1600.webp 1600w" sizes="(min-width: 760px) 33vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Citadel cadets volunteering at the 2026 Spring Festival"></div>
+          <div class="card__body">
+            <p class="card__meta"><time datetime="2026-04">April 2026</time></p>
+            <h3 class="card__title"><a class="card__link" href="story-spring-festival-2026.html">Spring Festival 2026</a></h3>
+            <p>Rides, a rodeo and a charro show at Exchange Park — with members and Citadel cadets working the grounds.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__media"><img src="/src/assets/img/story-appreciation-960.webp" srcset="/src/assets/img/story-appreciation-480.webp 480w, /src/assets/img/story-appreciation-960.webp 960w, /src/assets/img/story-appreciation-1600.webp 1600w" sizes="(min-width: 760px) 33vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="The hall set for the 2026 Fair Appreciation Party"></div>
+          <div class="card__body">
+            <p class="card__meta"><time datetime="2026-01-17">January 17, 2026</time></p>
+            <h3 class="card__title"><a class="card__link" href="story-fair-appreciation-2026.html">2026 Fair Appreciation Party</a></h3>
+            <p>An evening for the people behind the 2025 Coastal Carolina Fair.</p>
+          </div>
+        </li>
+      </ul>
+      <p><a href="stories.html">All stories</a></p>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="covenant-line">
+    <div class="container">
+      <figure class="pullquote">
+        <h2 class="visually-hidden" id="covenant-line">From the Exchange Covenant</h2>
+        <blockquote><p>“To serve in Unity with those seeking better conditions, better understandings, and greater opportunities for all.”</p></blockquote>
+        <figcaption>From the Exchange Covenant · <a href="about.html#covenant">Read it in full</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="cta-title">Get involved</h2>
+      <div class="cta-band">
+        <div class="cta-band__panel cta-band__panel--navy">
+          <p class="eyebrow">Membership</p>
+          <h3>Become an Exchangite</h3>
+          <p>Leadership, friendship and a hand in everything the fair makes possible.</p>
+          <a class="btn btn--give" href="join.html">Start your application</a>
+        </div>
+        <div class="cta-band__panel">
+          <p class="eyebrow">Give</p>
+          <h3>Give where it counts</h3>
+          <p>Fund a scholarship, a child-abuse prevention program or a community grant.</p>
+          <a class="btn btn--primary" href="give.html">Make a gift</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
