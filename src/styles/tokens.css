@@ -1,0 +1,49 @@
+:root {
+  /* Colour — spec §4.1. Gold is never text on a light ground; --fair-* only in fair components. */
+  --navy: #1B2A6B;
+  --navy-deep: #111A45;
+  --navy-tint: #E6E9F3;
+  --gold: #C9A227;
+  --gold-ink: #7A5C0B;
+  --linen: #F7F4EC;
+  --paper: #FFFFFF;
+  --ink: #15193A;
+  --muted: #4B5170;
+  --rule: #DAD5C7;
+  --success: #1F7A4D;
+  --danger: #B42318;
+  --fair-dusk: #111A3A;
+  --fair-red: #D5382C;
+  --fair-bulb: #FFC53D;
+
+  /* Type — spec §4.2 */
+  --font-display: 'Libre Caslon Display', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.33rem;
+  --step-2: clamp(1.9rem, 3.5vw, 2.6rem);
+  --step-3: clamp(2.6rem, 6vw, 4.2rem);
+  --eyebrow: 0.78rem;
+
+  /* Space, shape, depth */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+  --radius: 6px;
+  --radius-lg: 12px;
+  --shadow-1: 0 1px 2px rgb(21 25 58 / 0.08), 0 4px 16px rgb(21 25 58 / 0.06);
+  --shadow-2: 0 2px 4px rgb(21 25 58 / 0.08), 0 16px 40px rgb(21 25 58 / 0.14);
+  --scrim: rgb(10 14 38 / 0.72);
+  --container: 1200px;
+  --measure: 66ch;
+
+  color-scheme: light;
+}
