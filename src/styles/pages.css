@@ -12,3 +12,8 @@
   .home-hero__photo figcaption { max-width: 42%; }
   .home-hero__fair { position: absolute; right: calc(-1 * var(--space-4)); bottom: 0; width: min(20rem, 72%); }
 }
+
+/* ---------- The Fair ---------- */
+.fair-hero .breadcrumb ol, .fair-hero .breadcrumb a { color: var(--navy-tint); }
+.fair-hero .breadcrumb [aria-current='page'] { color: var(--paper); }
+.fair-hero .btn-row { gap: var(--space-5); }
