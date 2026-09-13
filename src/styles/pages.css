@@ -17,3 +17,7 @@
 .fair-hero .breadcrumb ol, .fair-hero .breadcrumb a { color: var(--navy-tint); }
 .fair-hero .breadcrumb [aria-current='page'] { color: var(--paper); }
 .fair-hero .btn-row { gap: var(--space-5); }
+
+/* ---------- Programs ---------- */
+.page-hero .jump-nav { margin-top: var(--space-2); }
+.section[id] { scroll-margin-top: 7rem; }
