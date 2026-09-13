@@ -12,8 +12,8 @@ const pages = Object.fromEntries(
     .map((file) => [file.replace(/\.html$/, ''), resolve(root, file)]),
 );
 
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/Exchange-Club-of-Charleston/' : '/',
+export default defineConfig(({ command, isPreview }) => ({
+  base: command === 'build' || isPreview ? '/Exchange-Club-of-Charleston/' : '/',
   plugins: [htmlPartials({ root })],
   build: {
     assetsInlineLimit: 0,
