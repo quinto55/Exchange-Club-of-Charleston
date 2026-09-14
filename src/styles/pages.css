@@ -8,9 +8,12 @@
 .home-hero__media { position: relative; display: grid; gap: var(--space-5); }
 @media (min-width: 900px) {
   .home-hero__inner { grid-template-columns: 1.05fr 1fr; }
-  .home-hero__media { padding-bottom: var(--space-9); }
-  .home-hero__photo figcaption { max-width: 42%; }
-  .home-hero__fair { position: absolute; right: calc(-1 * var(--space-4)); bottom: 0; width: min(20rem, 72%); }
+  /* Stay clear of the card's 20rem width plus its overhang, not just a flat share of the column. */
+  .home-hero__photo figcaption { max-width: min(42%, calc(100% - 21rem)); }
+  .home-hero__fair { position: relative; margin: -5rem calc(-1 * var(--space-4)) 0 auto; width: min(20rem, 80%); }
+  /* The split column is too narrow for the place-card's third (action) column without wrapping the meta line. */
+  .split [data-meeting-list] .place-card { grid-template-columns: auto 1fr; }
+  .split [data-meeting-list] .place-card__action { grid-column: 1 / -1; justify-self: start; }
 }
 
 /* ---------- The Fair ---------- */
@@ -86,3 +89,6 @@
 .roster li { display: grid; padding: var(--space-2) 0; border-top: 1px solid var(--rule); }
 .roster__name { font-weight: 600; }
 .roster__meta { color: var(--muted); font-size: var(--step--1); }
+
+/* ---------- Privacy ---------- */
+.prose code { padding: 0.1em 0.35em; background: var(--navy-tint); border-radius: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }
