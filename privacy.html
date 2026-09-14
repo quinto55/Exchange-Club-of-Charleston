@@ -9,6 +9,7 @@
 <meta property="og:description" content="What this demo site stores on your device (almost nothing) and what it never collects.">
 <meta property="og:url" content="https://quinto55.github.io/Exchange-Club-of-Charleston/privacy.html">
 <meta property="og:image" content="https://quinto55.github.io/Exchange-Club-of-Charleston/og/og-default.png">
+<!-- jsonld --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://quinto55.github.io/Exchange-Club-of-Charleston/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://quinto55.github.io/Exchange-Club-of-Charleston/privacy.html"}]}</script><!-- /jsonld -->
 </head>
 <body data-page="privacy">
 <!-- @include partials/header.html -->
@@ -25,6 +26,21 @@
       <p class="lede">This demo keeps almost nothing about you, and sends nothing anywhere.</p>
     </div>
   </header>
+  <section class="section">
+    <div class="container prose">
+      <h2>What this demo collects</h2>
+      <p>Nothing. The site sets no cookies and loads no analytics, advertising or tracking scripts. Every form in this demo — giving, RSVP, the membership application and contact — runs only in your browser and sends nothing anywhere.</p>
+      <h2>What it keeps on your device</h2>
+      <ul>
+        <li><code>ecc.portal</code> in session storage remembers that you opened the member-portal preview. It clears when you close the tab.</li>
+        <li><code>ecc.portal.state</code> in local storage keeps your demo shift and committee choices. "Reset demo" in the portal clears it.</li>
+      </ul>
+      <h2>Photos from the club's albums</h2>
+      <p>Gallery and story photos load from the club's photo storage at <code>clubrunner.blob.core.windows.net</code>. Like any image host, it receives your IP address and browser details when it serves them.</p>
+      <h2>At launch</h2>
+      <p>This page describes the demo only. A live site would replace it with the club's own privacy policy.</p>
+    </div>
+  </section>
 </main>
 <!-- @include partials/footer.html -->
 </body>

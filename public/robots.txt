@@ -1,0 +1,4 @@
+# Demo concept for the Exchange Club of Charleston — not the official site.
+# At real launch, delete this Disallow and the noindex meta in partials/head.html.
+User-agent: *
+Disallow: /

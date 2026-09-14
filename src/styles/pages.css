@@ -86,3 +86,6 @@
 .roster li { display: grid; padding: var(--space-2) 0; border-top: 1px solid var(--rule); }
 .roster__name { font-weight: 600; }
 .roster__meta { color: var(--muted); font-size: var(--step--1); }
+
+/* ---------- Privacy ---------- */
+.prose code { padding: 0.1em 0.35em; background: var(--navy-tint); border-radius: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exchange Club of Charleston — share image</title>
+<style>
+  @font-face { font-family: 'Libre Caslon Display'; src: url('../src/assets/fonts/libre-caslon-display-400.woff2') format('woff2'); }
+  @font-face { font-family: 'Public Sans'; src: url('../src/assets/fonts/public-sans-var.woff2') format('woff2'); font-weight: 400 700; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    box-sizing: border-box; display: grid; grid-template-columns: 300px 1fr; align-items: center; gap: 64px; padding: 0 84px;
+    background: #1B2A6B; color: #F7F4EC; font-family: 'Public Sans', system-ui, sans-serif;
+  }
+  .seal { width: 300px; height: 300px; }
+  .name { margin: 0; color: #FFFFFF; font: 400 86px/1.02 'Libre Caslon Display', Georgia, serif; }
+  .line { margin: 26px 0 0; color: #E6E9F3; font-size: 34px; font-weight: 600; }
+  .rule { width: 120px; height: 4px; margin: 34px 0 22px; background: #C9A227; }
+  .fair { margin: 0; color: #C9A227; font-size: 22px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+    <defs><path id="ring" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+    <circle cx="60" cy="60" r="59" fill="#111A45"/>
+    <circle cx="60" cy="60" r="55" fill="none" stroke="#C9A227" stroke-width="1.5"/>
+    <circle cx="60" cy="60" r="36" fill="none" stroke="#C9A227" stroke-width="1"/>
+    <text fill="#F7F4EC" font-family="Public Sans, sans-serif" font-size="7.4" font-weight="700" letter-spacing="1"><textPath href="#ring" textLength="284" lengthAdjust="spacing">UNITY FOR SERVICE · EXCHANGE CLUB OF CHARLESTON · 1923 ·</textPath></text>
+    <path d="M47 44a9 9 0 1 0 8.2 12.6a7.2 7.2 0 1 1-8.2-12.6z" fill="#C9A227"/>
+    <path d="M61 86c-.9-9-.2-18 1.2-27" fill="none" stroke="#C9A227" stroke-width="3.4" stroke-linecap="round"/>
+    <g fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round">
+      <path d="M62.2 58c-5.6-5.8-12.4-6.6-18-3.4"/><path d="M62.2 58c-3.6-7-3.6-12.6 0-17.6"/><path d="M62.2 58c3.6-7 9.2-9.8 15.4-9"/>
+      <path d="M62.2 58c6.4-3.6 12.6-2.8 17.4 2"/><path d="M62.2 58c-7.4-1.4-12.8 1.8-15.6 7.6"/><path d="M62.2 58c7.4-.6 12.2 2.8 14.2 8.4"/>
+    </g>
+  </svg>
+  <div>
+    <p class="name">Exchange Club<br>of Charleston</p>
+    <p class="line">Unity for Service, since 1923.</p>
+    <div class="rule"></div>
+    <p class="fair">The club behind the Coastal Carolina Fair</p>
+  </div>
+</body>
+</html>
