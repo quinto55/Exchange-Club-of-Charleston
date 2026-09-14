@@ -59,7 +59,8 @@ export function mountPortal(root, { session = webStore('sessionStorage'), storag
   const gate = $('[data-portal-gate]');
   const dash = $('[data-portal-dash]');
   const filter = $('[data-roster-filter]');
-  let state = readJson(storage, PORTAL_STATE_KEY, initialPortalState());
+  const saved = readJson(storage, PORTAL_STATE_KEY, null);
+  let state = Array.isArray(saved?.shifts) && Array.isArray(saved?.committees) ? saved : initialPortalState();
 
   const save = () => writeJson(storage, PORTAL_STATE_KEY, state);
   const renderShifts = () => $('[data-shifts]').replaceChildren(...SHIFTS.map((s) => shiftItem(s, state, doc)));

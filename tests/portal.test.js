@@ -13,7 +13,7 @@ const click = (el) => el.dispatchEvent(new MouseEvent('click', { bubbles: true, 
 const byId = (id) => SHIFTS.find((s) => s.id === id);
 
 describe('portal state', () => {
-  it('starts with the demo member\'s committee and no shifts', () => {
+  it("starts with the demo member's committee and no shifts", () => {
     expect(initialPortalState()).toEqual({ shifts: [], committees: ['Fair Operations'] });
   });
 
@@ -109,5 +109,15 @@ describe('portal page', () => {
     click(document.querySelector('[data-portal-enter]'));
     expect(document.querySelector('[data-portal-dash]').hidden).toBe(false);
     expect(document.querySelectorAll('[data-shifts] li')).toHaveLength(6);
+  });
+
+  it('guards stored state shape and falls back to initial state', () => {
+    session.setItem(PORTAL_SESSION_KEY, 'demo');
+    storage.setItem(PORTAL_STATE_KEY, JSON.stringify({ shifts: 'opening-gate' }));
+    mount();
+    expect(document.querySelector('[data-portal-dash]').hidden).toBe(false);
+    expect(document.querySelectorAll('[data-shifts] li')).toHaveLength(6);
+    expect(Array.from(document.querySelectorAll('[data-shift] button')).every((btn) => btn.textContent !== 'Withdraw')).toBe(true);
+    expect(document.querySelector('[data-committee="Fair Operations"]').checked).toBe(true);
   });
 });
