@@ -25,7 +25,139 @@
       <p class="lede">Every gift stays in the Lowcountry. Choose where yours goes.</p>
     </div>
   </header>
+
+  <section class="section" id="donate" aria-labelledby="donate-title">
+    <div class="container give-layout">
+      <div class="give-main">
+        <h2 class="visually-hidden" id="donate-title">Make a gift</h2>
+        <p class="demo-note no-js-only">The giving form needs JavaScript in this demo.</p>
+        <form class="flow js-only" data-flow="donate" novalidate>
+          <p class="demo-note">Nothing is charged or sent — this is a demo of the giving flow.</p>
+          <ol class="stepper" data-stepper aria-label="Gift progress"><li>Your gift</li><li>Your details</li><li>Review</li></ol>
+          <p class="visually-hidden" data-step-status aria-live="polite"></p>
+          <p class="flow__status" data-form-status aria-live="polite"></p>
+
+          <fieldset data-step data-step-title="Your gift">
+            <legend tabindex="-1" data-step-heading>Choose where your gift goes</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="fund" value="scholarships"><span class="choice__label"><strong>Scholarships</strong><span>Academic scholarships for Lowcountry students, awarded each March.</span></span></label>
+              <label class="choice"><input type="radio" name="fund" value="child-abuse-prevention"><span class="choice__label"><strong>Child Abuse Prevention</strong><span>Support for local partners such as the Dee Norton Child Advocacy Center.</span></span></label>
+              <label class="choice"><input type="radio" name="fund" value="community-grants"><span class="choice__label"><strong>Fair Community Grants</strong><span>Grants to local nonprofits, alongside what the fair raises.</span></span></label>
+              <label class="choice"><input type="radio" name="fund" value="general" checked><span class="choice__label"><strong>Where it’s needed most</strong><span>Lets the club put your gift where it will do the most good.</span></span></label>
+            </div>
+            <fieldset class="nested">
+              <legend>Amount</legend>
+              <div class="choice-grid choice-grid--compact">
+                <label class="choice"><input type="radio" name="amount" value="50"><span class="choice__label">$50</span></label>
+                <label class="choice"><input type="radio" name="amount" value="100"><span class="choice__label">$100</span></label>
+                <label class="choice"><input type="radio" name="amount" value="250" checked><span class="choice__label">$250</span></label>
+                <label class="choice"><input type="radio" name="amount" value="500"><span class="choice__label">$500</span></label>
+                <label class="choice"><input type="radio" name="amount" value="custom"><span class="choice__label">Other</span></label>
+              </div>
+              <div class="field" data-custom-field hidden>
+                <label for="gift-custom">Other amount, in whole dollars</label>
+                <input id="gift-custom" name="custom" inputmode="numeric" autocomplete="off" aria-describedby="err-gift-custom">
+                <p class="field__error" id="err-gift-custom" data-error-for="custom" hidden></p>
+              </div>
+            </fieldset>
+            <fieldset class="nested">
+              <legend>How often?</legend>
+              <div class="choice-grid choice-grid--compact">
+                <label class="choice"><input type="radio" name="frequency" value="once" checked><span class="choice__label">One-time</span></label>
+                <label class="choice"><input type="radio" name="frequency" value="monthly"><span class="choice__label">Monthly</span></label>
+              </div>
+            </fieldset>
+            <div class="flow__actions"><button class="btn btn--primary" type="button" data-next>Continue</button></div>
+          </fieldset>
+
+          <fieldset data-step data-step-title="Your details" hidden>
+            <legend tabindex="-1" data-step-heading>Your details</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="gift-first">First name</label>
+                <input id="gift-first" name="first" autocomplete="given-name" aria-describedby="err-gift-first">
+                <p class="field__error" id="err-gift-first" data-error-for="first" hidden></p>
+              </div>
+              <div class="field">
+                <label for="gift-last">Last name</label>
+                <input id="gift-last" name="last" autocomplete="family-name" aria-describedby="err-gift-last">
+                <p class="field__error" id="err-gift-last" data-error-for="last" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="gift-email">Email</label>
+              <input id="gift-email" name="email" type="email" autocomplete="email" aria-describedby="err-gift-email">
+              <p class="field__error" id="err-gift-email" data-error-for="email" hidden></p>
+            </div>
+            <label class="check"><input type="checkbox" name="tributeOn"> <span>Dedicate this gift to someone</span></label>
+            <div class="tribute" data-tribute hidden>
+              <fieldset class="nested">
+                <legend>Dedication</legend>
+                <div class="choice-grid choice-grid--compact">
+                  <label class="choice"><input type="radio" name="tributeType" value="honor" checked><span class="choice__label">In honor of</span></label>
+                  <label class="choice"><input type="radio" name="tributeType" value="memory"><span class="choice__label">In memory of</span></label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="gift-tribute-name">Their name</label>
+                <input id="gift-tribute-name" name="tributeName" autocomplete="off" aria-describedby="err-gift-tribute">
+                <p class="field__error" id="err-gift-tribute" data-error-for="tributeName" hidden></p>
+              </div>
+            </div>
+            <div class="flow__actions">
+              <button class="btn btn--secondary" type="button" data-back>Back</button>
+              <button class="btn btn--primary" type="button" data-next>Review your gift</button>
+            </div>
+          </fieldset>
+
+          <fieldset data-step data-step-title="Review" hidden>
+            <legend tabindex="-1" data-step-heading>Review your gift</legend>
+            <dl class="summary" data-summary></dl>
+            <div class="payment-placeholder">
+              <strong>Secure payment</strong>
+              <p>In production this step hands off to the club’s payment processor. No payment is collected in this demo.</p>
+            </div>
+            <div class="flow__actions">
+              <button class="btn btn--secondary" type="button" data-back>Back</button>
+              <button class="btn btn--give" type="submit">Complete demo gift</button>
+            </div>
+          </fieldset>
+        </form>
+        <div class="confirm" data-confirm="donate" hidden tabindex="-1">
+          <p class="confirm__badge">Demo receipt</p>
+          <h3>Thank you, <span data-confirm-name></span>.</h3>
+          <dl class="summary" data-confirm-summary></dl>
+          <p>Reference <span class="confirm__ref" data-confirm-ref></span> · <time data-confirm-date></time></p>
+          <p class="demo-note">No money moved. In production the club’s payment processor would email your receipt.</p>
+          <div class="btn-row"><button class="btn btn--secondary" type="button" data-restart>Give again</button></div>
+        </div>
+      </div>
+      <aside class="give-aside">
+        <figure class="photo">
+          <img src="/src/assets/img/give-scholar-960.webp" srcset="/src/assets/img/give-scholar-480.webp 480w, /src/assets/img/give-scholar-960.webp 960w, /src/assets/img/give-scholar-1600.webp 1600w" sizes="(min-width: 1000px) 35vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="A scholarship recipient shakes hands with the club president">
+          <figcaption>A 2024 scholarship recipient with the club president.</figcaption>
+        </figure>
+        <p><strong>Every gift stays in the Lowcountry.</strong> Gifts and fair proceeds fund scholarships, community grants and child-abuse prevention.</p>
+        <p class="club-note">Tax status and receipts: club to confirm</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="other-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">More ways to help</p>
+        <h2 id="other-title">Other ways to give</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="cta-band__panel"><h3>Sponsor the fair</h3><p>Put your business in front of fairgoers while funding local giving.</p><a href="contact.html?topic=fair">Ask about sponsorship</a></div>
+        <div class="cta-band__panel"><h3>Volunteer</h3><p>Fair workdays and fair shifts are how members give their time.</p><a href="join.html">Join the club</a></div>
+        <div class="cta-band__panel"><h3>In-kind gifts</h3><p>Goods and services for the fair and our programs.</p><a href="contact.html?topic=donations">Talk to the treasurer</a></div>
+      </div>
+    </div>
+  </section>
 </main>
 <!-- @include partials/footer.html -->
+<script type="module" src="/src/js/pages/give.js"></script>
 </body>
 </html>
