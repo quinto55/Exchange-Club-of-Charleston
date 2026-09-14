@@ -48,4 +48,26 @@ describe('lightbox', () => {
     expect(dialog.open).toBe(false);
     expect(document.activeElement).toBe(first);
   });
+
+  it('returns focus to the thumbnail on close even when nothing was focused when it opened', () => {
+    const first = document.querySelector('a[data-lightbox]');
+    document.activeElement?.blur();
+    expect(document.activeElement).toBe(document.body);
+    click(first);
+    click(dialog.querySelector('[data-lightbox-close]'));
+    expect(dialog.open).toBe(false);
+    expect(document.activeElement).toBe(first);
+  });
+
+  it('returns focus to the thumbnail when the dialog is cancelled (Escape)', () => {
+    const first = document.querySelector('a[data-lightbox]');
+    click(first);
+    dialog.dispatchEvent(new Event('cancel', { bubbles: true, cancelable: true }));
+    // The cancel handler itself must restore focus — real browsers don't reliably
+    // fire `close` after `cancel`, so this can't depend on the `close` listener.
+    expect(document.activeElement).toBe(first);
+    dialog.close();
+    expect(dialog.open).toBe(false);
+    expect(document.activeElement).toBe(first);
+  });
 });
