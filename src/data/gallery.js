@@ -1,0 +1,687 @@
+// Hotlinked from the club's public ClubRunner photo albums (curated 2026-09-11). Thumbnails are 450 px wide.
+export const PHOTO_BASE = 'https://clubrunner.blob.core.windows.net/00000101847';
+
+export const ALBUMS = [
+  {
+    "slug": "fairpictures2025-ridesgames",
+    "title": "Fair 2025 · Rides & games",
+    "date": "2025-11-01",
+    "photos": [
+      {
+        "file": "B5D2L0040.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L0461.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L0528.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L0548.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L0575.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L9758.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "R5--3-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "R8--2-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "R11--1-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "R13--2-.JPG",
+        "w": 450,
+        "h": 300
+      }
+    ]
+  },
+  {
+    "slug": "fairpictures2025-groundsmisc",
+    "title": "Fair 2025 · Around the grounds",
+    "date": "2025-11-01",
+    "photos": [
+      {
+        "file": "B5D2L0270.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L8683.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "B5D2L9362.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "B5D2L9735.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "DSC02127.JPG",
+        "w": 450,
+        "h": 253
+      },
+      {
+        "file": "IMG_1929.jpg",
+        "w": 450,
+        "h": 337
+      },
+      {
+        "file": "Wheels--3-.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "Wheels--8-.JPG",
+        "w": 450,
+        "h": 299
+      }
+    ]
+  },
+  {
+    "slug": "springfestival2026-members",
+    "title": "Spring Festival 2026 · Members",
+    "date": "2026-04-21",
+    "photos": [
+      {
+        "file": "B5D2L2396.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2461.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2552.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2685.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "B5D2L2869.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2877.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3128.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3135.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3175.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3194.JPG",
+        "w": 450,
+        "h": 300
+      }
+    ]
+  },
+  {
+    "slug": "springfestival2026-citadelcadets",
+    "title": "Spring Festival 2026 · Citadel cadets",
+    "date": "2026-04-21",
+    "photos": [
+      {
+        "file": "B5D2L2401.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2403.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2405.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2421.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L2850.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3144.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3147.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L3203.JPG",
+        "w": 450,
+        "h": 300
+      }
+    ]
+  },
+  {
+    "slug": "installationbanquet-20260620-ken",
+    "title": "Installation Banquet · June 20, 2026",
+    "date": "2026-06-20",
+    "photos": [
+      {
+        "file": "A-Invitation.JPG",
+        "w": 331,
+        "h": 449
+      },
+      {
+        "file": "B5D2L5095.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L5134.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L5165.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L5201.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L5235.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L5388.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "B5D2L5456.JPG",
+        "w": 450,
+        "h": 153
+      },
+      {
+        "file": "B5D2L5495.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L5570.JPG",
+        "w": 450,
+        "h": 300
+      }
+    ]
+  },
+  {
+    "slug": "2026fairappreciationparty-01-17-2026",
+    "title": "Fair Appreciation Party · January 17, 2026",
+    "date": "2026-01-17",
+    "photos": [
+      {
+        "file": "A--1-.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "A--17-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B--15-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B--32-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B--48-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B--65-.JPG",
+        "w": 299,
+        "h": 450
+      },
+      {
+        "file": "B--82-.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "D--5-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "G--5-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "G--22-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "G--38-.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "G--55-.JPG",
+        "w": 450,
+        "h": 300
+      }
+    ]
+  },
+  {
+    "slug": "fair-workday-06-06-2026",
+    "title": "Fair Workday · June 6, 2026",
+    "date": "2026-06-06",
+    "photos": [
+      {
+        "file": "B5D2L4675.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4681.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4687.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4693.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4702.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4713.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4719.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4727.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4740.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4748.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4757.JPG",
+        "w": 450,
+        "h": 300
+      },
+      {
+        "file": "B5D2L4772.JPG",
+        "w": 450,
+        "h": 300
+      }
+    ]
+  },
+  {
+    "slug": "weekly-meeting-5-2-2024-national-defense",
+    "title": "National Defense Luncheon · May 2, 2024",
+    "date": "2024-05-02",
+    "photos": [
+      {
+        "file": "AIMG_7874.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_7884.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_7906.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_7941.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_7957.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_7996.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_8035.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_8059.JPG",
+        "w": 450,
+        "h": 299
+      },
+      {
+        "file": "AIMG_8091.JPG",
+        "w": 450,
+        "h": 299
+      }
+    ]
+  }
+];
+
+export const STORY_PHOTOS = {
+  "story-fair-workday-2026": [
+    {
+      "album": "fair-workday-06-06-2026",
+      "file": "B5D2L4675.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "fair-workday-06-06-2026",
+      "file": "B5D2L4687.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "fair-workday-06-06-2026",
+      "file": "B5D2L4702.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "fair-workday-06-06-2026",
+      "file": "B5D2L4719.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "fair-workday-06-06-2026",
+      "file": "B5D2L4748.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "fair-workday-06-06-2026",
+      "file": "B5D2L4757.JPG",
+      "w": 450,
+      "h": 300
+    }
+  ],
+  "story-spring-festival-2026": [
+    {
+      "album": "springfestival2026-citadelcadets",
+      "file": "B5D2L2401.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "springfestival2026-citadelcadets",
+      "file": "B5D2L2405.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "springfestival2026-citadelcadets",
+      "file": "B5D2L2850.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "springfestival2026-members",
+      "file": "B5D2L2396.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "springfestival2026-members",
+      "file": "B5D2L2552.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "springfestival2026-members",
+      "file": "B5D2L3135.JPG",
+      "w": 450,
+      "h": 300
+    }
+  ],
+  "story-fair-appreciation-2026": [
+    {
+      "album": "2026fairappreciationparty-01-17-2026",
+      "file": "B--15-.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "2026fairappreciationparty-01-17-2026",
+      "file": "B--32-.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "2026fairappreciationparty-01-17-2026",
+      "file": "B--82-.JPG",
+      "w": 450,
+      "h": 299
+    },
+    {
+      "album": "2026fairappreciationparty-01-17-2026",
+      "file": "D--5-.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "2026fairappreciationparty-01-17-2026",
+      "file": "G--5-.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "2026fairappreciationparty-01-17-2026",
+      "file": "G--55-.JPG",
+      "w": 450,
+      "h": 300
+    }
+  ],
+  "story-scholarships-2024": [
+    {
+      "album": "weekly-meeting-3-7-2024-scholarships",
+      "file": "AIMG_3082.JPG",
+      "w": 450,
+      "h": 299
+    },
+    {
+      "album": "weekly-meeting-3-7-2024-scholarships",
+      "file": "AIMG_3119.JPG",
+      "w": 450,
+      "h": 299
+    },
+    {
+      "album": "weekly-meeting-3-7-2024-scholarships",
+      "file": "AIMG_3141.JPG",
+      "w": 450,
+      "h": 299
+    },
+    {
+      "album": "weekly-meeting-3-7-2024-scholarships",
+      "file": "AIMG_3152.JPG",
+      "w": 450,
+      "h": 299
+    },
+    {
+      "album": "weekly-meeting-3-7-2024-scholarships",
+      "file": "AIMG_3159.JPG",
+      "w": 450,
+      "h": 299
+    },
+    {
+      "album": "weekly-meeting-3-7-2024-scholarships",
+      "file": "AIMG_3178.JPG",
+      "w": 450,
+      "h": 299
+    }
+  ],
+  "story-blue-gold-2024": [
+    {
+      "album": "weekly-meeting-5-9-2024-blue-gold",
+      "file": "AIMG_8115.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-5-9-2024-blue-gold",
+      "file": "AIMG_8138.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-5-9-2024-blue-gold",
+      "file": "AIMG_8177.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-5-9-2024-blue-gold",
+      "file": "AIMG_8201.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-5-9-2024-blue-gold",
+      "file": "AIMG_8214.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-5-9-2024-blue-gold",
+      "file": "AIMG_8232.JPG",
+      "w": 450,
+      "h": 300
+    }
+  ],
+  "story-dee-norton-2024": [
+    {
+      "album": "weekly-meeting-4-4-2024-dee-norton",
+      "file": "AIMG_7261.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-4-4-2024-dee-norton",
+      "file": "AIMG_7282.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-4-4-2024-dee-norton",
+      "file": "AIMG_7290.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-4-4-2024-dee-norton",
+      "file": "AIMG_7315.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-4-4-2024-dee-norton",
+      "file": "AIMG_7322.JPG",
+      "w": 450,
+      "h": 300
+    },
+    {
+      "album": "weekly-meeting-4-4-2024-dee-norton",
+      "file": "AIMG_7287.JPG",
+      "w": 450,
+      "h": 300
+    }
+  ]
+};
