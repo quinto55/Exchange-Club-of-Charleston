@@ -25,7 +25,63 @@
       <p class="lede">Members sign in to see the roster, sign up for fair shifts and check their dues.</p>
     </div>
   </header>
+  <section class="section" aria-labelledby="portal-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="portal-title">Member portal preview</h2>
+      <p class="demo-note no-js-only">The member portal preview needs JavaScript.</p>
+      <div class="portal js-only" data-portal>
+        <div class="portal-gate" data-portal-gate>
+          <h3>Sign in</h3>
+          <p>In production, members sign in with their own account. This preview uses a fictional member and fictional data — nothing you do here leaves your browser.</p>
+          <button class="btn btn--primary" type="button" data-portal-enter>Continue as demo member</button>
+        </div>
+        <div class="portal-dash" data-portal-dash hidden>
+          <div class="portal-dash__bar">
+            <p class="demo-note">Demo data — fictional members</p>
+            <div class="btn-row">
+              <button class="btn btn--secondary btn--sm" type="button" data-portal-reset>Reset demo</button>
+              <button class="btn btn--secondary btn--sm" type="button" data-portal-signout>Sign out</button>
+            </div>
+          </div>
+          <h3 tabindex="-1" data-portal-welcome>Welcome back, Jordan</h3>
+          <div class="portal-grid">
+            <div class="portal-main">
+              <section class="portal-card" aria-labelledby="shifts-title">
+                <h4 id="shifts-title">Fair workdays &amp; shifts</h4>
+                <ul class="shift-list" data-shifts></ul>
+              </section>
+              <section class="portal-card" aria-labelledby="roster-title">
+                <h4 id="roster-title">Roster</h4>
+                <div class="field">
+                  <label for="roster-filter">Filter by name or committee</label>
+                  <input id="roster-filter" type="search" autocomplete="off" data-roster-filter>
+                </div>
+                <p class="card__meta" data-roster-count aria-live="polite"></p>
+                <ul class="roster" data-roster></ul>
+              </section>
+            </div>
+            <div class="portal-side">
+              <section class="portal-card" aria-labelledby="dues-title">
+                <h4 id="dues-title">Dues</h4>
+                <p class="portal-status">Paid through June 30, 2027</p>
+                <p class="card__meta">Member since 2019</p>
+              </section>
+              <section class="portal-card" aria-labelledby="committees-title">
+                <h4 id="committees-title">Committees</h4>
+                <ul class="committee-list" data-committees></ul>
+              </section>
+              <section class="portal-card" aria-labelledby="news-title">
+                <h4 id="news-title">Announcements</h4>
+                <ul class="announce-list" data-announcements></ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <!-- @include partials/footer.html -->
+<script type="module" src="/src/js/pages/portal.js"></script>
 </body>
 </html>
