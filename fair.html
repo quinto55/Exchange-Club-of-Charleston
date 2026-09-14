@@ -13,18 +13,108 @@
 <body data-page="fair">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
-    <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li><span aria-current="page">The Fair</span></li>
-      </ol>
-    </nav>
-      <h1>The Coastal Carolina Fair</h1>
-      <p class="lede">Our flagship fundraiser since 1957 — Oct 29 – Nov 8, 2026 at Exchange Park in Ladson.</p>
+  <section class="fair-hero" aria-labelledby="fair-title">
+    <div class="fair-hero__bg">
+      <img src="/src/assets/img/fair-night-960.webp" srcset="/src/assets/img/fair-night-480.webp 480w, /src/assets/img/fair-night-960.webp 960w, /src/assets/img/fair-night-1600.webp 1600w" sizes="100vw" width="1600" height="1067" fetchpriority="high" decoding="async" alt="">
     </div>
-  </header>
+    <div class="container">
+      <div class="fair-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><span aria-current="page">The Fair</span></li>
+          </ol>
+        </nav>
+        <p class="eyebrow">Our flagship fundraiser · since 1957</p>
+        <h1 id="fair-title">The Coastal Carolina Fair</h1>
+        <p class="fair-hero__dates">Oct 29 – Nov 8, 2026</p>
+        <p class="fair-hero__place">Exchange Park · 9850 Highway 78, Ladson, SC 29456</p>
+        <p class="fair-hero__countdown" data-countdown>Gates open Thursday, Oct 29 at 3:00 PM</p>
+        <div class="btn-row">
+          <a class="ticket-btn" href="https://www.coastalcarolinafair.org/p/tickets--deals" rel="noopener">Get tickets <span class="ticket-btn__stub" aria-hidden="true">→</span></a>
+          <a href="https://quinto55.github.io/Coastal-Carolina-Fair-/" rel="noopener">Preview the fair site redesign</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="money-title">
+    <div class="container split">
+      <div class="prose">
+        <p class="eyebrow">Where the money goes</p>
+        <h2 id="money-title">Eleven days that fund a year of service</h2>
+        <p>The fair is the Exchange Club of Charleston’s engine for giving. Members run it as volunteers, and what it raises comes back to the Lowcountry as grants to local nonprofits, scholarships for local students and support for child-abuse prevention.</p>
+        <p>After the latest fair, more than $504,000 went to over 90 local nonprofits and students. Since 2003 the fair has returned more than $11 million to the Lowcountry.</p>
+        <p><a class="btn btn--primary" href="programs.html">See the programs it funds</a></p>
+      </div>
+      <figure class="photo">
+        <img src="/src/assets/img/fair-opening-960.webp" srcset="/src/assets/img/fair-opening-480.webp 480w, /src/assets/img/fair-opening-960.webp 960w, /src/assets/img/fair-opening-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Members cut the ribbon to open the 2025 Coastal Carolina Fair">
+        <figcaption>Opening day, 2025.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="history-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">History</p>
+        <h2 id="history-title">A fair since 1922</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item"><span class="timeline__year">1922</span><p class="timeline__text">The Charleston County fair opens at College Park on Rutledge Avenue.</p></li>
+        <li class="timeline__item"><span class="timeline__year">1924</span><p class="timeline__text">The fair moves to the grounds of the Charleston Rifle Club.</p></li>
+        <li class="timeline__item"><span class="timeline__year">1925</span><p class="timeline__text">Five years on Marion Square, using the old Citadel building next door.</p></li>
+        <li class="timeline__item"><span class="timeline__year">1930</span><p class="timeline__text">The Charleston Agricultural and Industrial Fair opens on the grounds around Johnson Hagood Stadium.</p></li>
+        <li class="timeline__item"><span class="timeline__year">1942</span><p class="timeline__text">No full fair during World War II — poultry and pigeon shows carry on through 1944.</p></li>
+        <li class="timeline__item"><span class="timeline__year">1957</span><p class="timeline__text">The Exchange Club of Charleston takes ownership of the fair.</p></li>
+        <li class="timeline__item"><span class="timeline__year">1979</span><p class="timeline__text">The fair settles at Exchange Park in Ladson — more than 180 acres.</p></li>
+        <li class="timeline__item"><span class="timeline__year">2026</span><p class="timeline__text">October 29 – November 8: the next fair.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="more-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">More fundraisers</p>
+        <h2 id="more-title">Exchange Park all year</h2>
+      </div>
+      <div class="grid grid--2">
+        <article class="card">
+          <div class="card__media"><img src="/src/assets/img/festival-rodeo-960.webp" srcset="/src/assets/img/festival-rodeo-480.webp 480w, /src/assets/img/festival-rodeo-960.webp 960w, /src/assets/img/festival-rodeo-1600.webp 1600w" sizes="(min-width: 760px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="A rider gallops across the arena at the 2026 Spring Festival"></div>
+          <div class="card__body">
+            <h3 class="card__title">Family Festival &amp; Triple B Cowboy Challenge</h3>
+            <p>Each spring, Exchange Park fills with carnival rides and a professional rodeo — bronc riding, bull riding and barrel racing.</p>
+            <p class="club-note">2027 dates: club to confirm</p>
+            <p><a href="https://exchangeparkfamilyfestival.com/" rel="noopener">Visit the festival site</a></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media"><img src="/src/assets/img/fairgrounds-day-960.webp" srcset="/src/assets/img/fairgrounds-day-480.webp 480w, /src/assets/img/fairgrounds-day-960.webp 960w, /src/assets/img/fairgrounds-day-1600.webp 1600w" sizes="(min-width: 760px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="The Ferris wheel and palms across the lake at Exchange Park"></div>
+          <div class="card__body">
+            <h3 class="card__title">Exchange Park Food Court</h3>
+            <p>Food trucks with dishes from across Central and South America, plus Charleston favorites, every weekend in lot 2B at Exchange Park.</p>
+            <p class="card__meta">Saturdays &amp; Sundays · 8 am – 7 pm</p>
+            <p class="club-note">Hours: club to confirm</p>
+            <p><a href="https://www.facebook.com/ExchangeParkFoodCourt/" rel="noopener">Food Court on Facebook</a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" aria-labelledby="volunteer-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <h2 id="volunteer-title">Work the fair with us</h2>
+        <p class="lede">Members volunteer thousands of hours to run the fair. Join the club and you’re part of the crew.</p>
+        <div class="btn-row">
+          <a class="btn btn--give" href="join.html">Join the club</a>
+          <a class="btn btn--light" href="contact.html?topic=fair">Ask about the fair</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <!-- @include partials/footer.html -->
 </body>

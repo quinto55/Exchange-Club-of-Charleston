@@ -40,8 +40,9 @@ describe('site shell', () => {
 
   it('renders upcoming meetings into [data-meeting-list]', () => {
     document.body.insertAdjacentHTML('beforeend', '<ul class="place-list" data-meeting-list data-limit="2"></ul>');
+    const list = document.body.lastElementChild;
     initMeetingLists(document, new Date('2026-10-02T12:00:00-04:00'));
-    const cards = document.querySelectorAll('[data-meeting-list] .place-card');
+    const cards = list.querySelectorAll('.place-card');
     expect(cards).toHaveLength(2);
     expect(cards[0].textContent).toContain('Thursday, October 8, 2026');
     expect(cards[0].querySelector('a').getAttribute('href')).toBe('meetings.html#rsvp');

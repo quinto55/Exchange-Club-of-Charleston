@@ -1,1 +1,52 @@
 /* Page-specific layout. Each page task appends one block headed with a comment naming the page. */
+
+/* ---------- Home ---------- */
+.home-hero { padding-block: clamp(var(--space-6), 6vw, var(--space-8)); }
+.home-hero__inner { display: grid; align-items: center; gap: var(--space-7); }
+.home-hero__text { display: grid; gap: var(--space-5); }
+.home-hero__text .lede { font-size: 1.25rem; }
+.home-hero__media { position: relative; display: grid; gap: var(--space-5); }
+@media (min-width: 900px) {
+  .home-hero__inner { grid-template-columns: 1.05fr 1fr; }
+  .home-hero__media { padding-bottom: var(--space-9); }
+  .home-hero__photo figcaption { max-width: 42%; }
+  .home-hero__fair { position: absolute; right: calc(-1 * var(--space-4)); bottom: 0; width: min(20rem, 72%); }
+}
+
+/* ---------- The Fair ---------- */
+.fair-hero .breadcrumb ol, .fair-hero .breadcrumb a { color: var(--navy-tint); }
+.fair-hero .breadcrumb [aria-current='page'] { color: var(--paper); }
+.fair-hero .btn-row { gap: var(--space-5); }
+
+/* ---------- Programs ---------- */
+.page-hero .jump-nav { margin-top: var(--space-2); }
+.section[id] { scroll-margin-top: 7rem; }
+
+/* ---------- Stories, gallery, lightbox ---------- */
+.story-body { display: grid; gap: var(--space-6); }
+.story-body > .photo img { max-height: 70vh; }
+.story-body .prose { font-size: 1.1rem; }
+.story-photos { display: grid; gap: var(--space-4); }
+.photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+@media (min-width: 760px) { .photo-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1100px) { .photo-grid--dense { grid-template-columns: repeat(4, 1fr); } }
+.photo-grid__link { display: block; overflow: hidden; background: var(--navy-tint); border-radius: var(--radius); }
+.photo-grid__link img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.3s; }
+.photo-grid__link:hover img { transform: scale(1.03); }
+.album { display: grid; gap: var(--space-4); margin-bottom: var(--space-7); }
+.album__meta { color: var(--muted); font-size: var(--step--1); font-variant-numeric: tabular-nums; }
+.lightbox { width: min(96vw, 1100px); max-height: 94vh; padding: 0; overflow: hidden; background: var(--navy-deep); color: var(--paper); border: 0; border-radius: var(--radius-lg); }
+.lightbox::backdrop { background: var(--scrim); }
+.lightbox :focus-visible { outline-color: var(--gold); }
+.lightbox__figure { display: grid; gap: var(--space-2); padding: var(--space-4) var(--space-4) var(--space-3); }
+.lightbox__img { width: 100%; max-height: 80vh; object-fit: contain; }
+.lightbox__caption { color: var(--navy-tint); font-size: var(--step--1); text-align: center; font-variant-numeric: tabular-nums; }
+.lightbox__btn {
+  position: absolute; display: grid; place-items: center; width: 44px; height: 44px;
+  background: color-mix(in srgb, var(--paper) 16%, transparent); color: var(--paper);
+  border: 0; border-radius: 50%; font-size: 1.6rem; line-height: 1; cursor: pointer;
+}
+.lightbox__btn:hover { background: color-mix(in srgb, var(--paper) 28%, transparent); }
+.lightbox__btn--prev { left: var(--space-3); top: 50%; translate: 0 -50%; }
+.lightbox__btn--next { right: var(--space-3); top: 50%; translate: 0 -50%; }
+.lightbox__btn--close { right: var(--space-3); top: var(--space-3); }
