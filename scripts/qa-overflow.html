@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Overflow QA</title>
+<pre id="out">running…</pre>
+<script type="module">
+  const pages = ['index', 'fair', 'programs', 'give', 'join', 'meetings', 'stories',
+    'story-fair-workday-2026', 'story-spring-festival-2026', 'story-fair-appreciation-2026',
+    'story-scholarships-2024', 'story-blue-gold-2024', 'story-dee-norton-2024',
+    'about', 'gallery', 'contact', 'portal', 'privacy', '404'];
+  const widths = [360, 768, 1280];
+  const lines = [];
+  for (const width of widths) {
+    for (const page of pages) {
+      const frame = document.createElement('iframe');
+      frame.style.cssText = `position:absolute;left:-99999px;width:${width}px;height:900px;border:0`;
+      frame.src = `/${page}.html`;
+      document.body.append(frame);
+      await new Promise((resolve) => { frame.onload = resolve; });
+      await new Promise((resolve) => setTimeout(resolve, 400));
+      const over = frame.contentDocument.documentElement.scrollWidth - frame.contentWindow.innerWidth;
+      lines.push(`${over > 1 ? 'FAIL' : 'ok  '} ${String(width).padStart(4)} ${page}${over > 1 ? ` (+${over}px)` : ''}`);
+      frame.remove();
+    }
+  }
+  document.getElementById('out').textContent = `${lines.join('\n')}\nDONE`;
+</script>
