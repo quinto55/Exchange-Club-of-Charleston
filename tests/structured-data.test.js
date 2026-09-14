@@ -58,4 +58,16 @@ describe('structured data', () => {
     expect(html).toBe(injectJsonLd(html, pageJsonLd(file)));
     for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) expect(() => JSON.parse(m[1])).not.toThrow();
   });
+
+  it.each(pages.filter((f) => f !== '404.html'))('%s has structured data', (file) => {
+    expect(pageJsonLd(file).length).toBeGreaterThan(0);
+  });
+
+  it('lists every page except 404 in the sitemap', () => {
+    const origin = 'https://quinto55.github.io/Exchange-Club-of-Charleston/';
+    const xml = readFileSync(resolve(root, 'public/sitemap.xml'), 'utf8');
+    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).sort();
+    const expected = pages.filter((f) => f !== '404.html').map((f) => (f === 'index.html' ? origin : origin + f)).sort();
+    expect(locs).toEqual(expected);
+  });
 });
