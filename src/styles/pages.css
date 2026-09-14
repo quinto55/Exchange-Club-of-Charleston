@@ -56,3 +56,8 @@
 @media (min-width: 1000px) { .give-layout { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
 .give-main, .give-aside { display: grid; gap: var(--space-4); }
 .tribute { display: grid; gap: var(--space-4); padding-left: var(--space-4); border-left: 2px solid var(--rule); }
+
+/* ---------- Contact ---------- */
+.contact-layout { display: grid; align-items: start; gap: var(--space-7); }
+@media (min-width: 1000px) { .contact-layout { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); } }
+.contact-main { display: grid; gap: var(--space-4); }

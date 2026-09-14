@@ -25,7 +25,68 @@
       <p class="lede">Questions about the club, the fair or a gift? Send a note and it goes to the right person.</p>
     </div>
   </header>
+  <section class="section" aria-labelledby="message-title">
+    <div class="container contact-layout">
+      <div class="contact-main">
+        <h2 id="message-title">Send a message</h2>
+        <p class="demo-note no-js-only">The contact form needs JavaScript in this demo.</p>
+        <form class="flow js-only" data-flow="contact" novalidate>
+          <p class="demo-note">Nothing is sent — this message stays in your browser.</p>
+          <p class="flow__status" data-form-status aria-live="polite"></p>
+          <div class="field-row">
+            <div class="field">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" name="name" autocomplete="name" aria-describedby="err-contact-name">
+              <p class="field__error" id="err-contact-name" data-error-for="name" hidden></p>
+            </div>
+            <div class="field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" aria-describedby="err-contact-email">
+              <p class="field__error" id="err-contact-email" data-error-for="email" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contact-topic">Topic</label>
+            <select id="contact-topic" name="topic" aria-describedby="contact-route">
+              <option value="general">General question</option>
+              <option value="membership">Membership</option>
+              <option value="fair">The Coastal Carolina Fair</option>
+              <option value="donations">Donations</option>
+              <option value="media">Media</option>
+              <option value="board">The board</option>
+            </select>
+            <p class="field__hint" id="contact-route" data-route aria-live="polite">Goes to the club secretary (in production).</p>
+          </div>
+          <div class="field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" aria-describedby="err-contact-message"></textarea>
+            <p class="field__error" id="err-contact-message" data-error-for="message" hidden></p>
+          </div>
+          <div class="flow__actions"><button class="btn btn--primary" type="submit">Send message</button></div>
+        </form>
+        <div class="confirm" data-confirm="contact" hidden tabindex="-1">
+          <p class="confirm__badge">Demo — message received</p>
+          <h3>Thanks, <span data-confirm-name></span>.</h3>
+          <p>Your message about <strong data-confirm-topic></strong> would go to <span data-confirm-route></span>.</p>
+          <p>Reference <span class="confirm__ref" data-confirm-ref></span></p>
+          <p class="demo-note">Nothing left your browser.</p>
+          <div class="btn-row"><button class="btn btn--secondary" type="button" data-restart>Send another message</button></div>
+        </div>
+      </div>
+      <aside class="contact-aside prose">
+        <h2>Visit</h2>
+        <p><strong>Thursday lunch</strong><br>12:00 PM · Charleston Rifle Club<br>2221 Heriot St, Charleston, SC 29403</p>
+        <p><strong>The fair</strong><br>Exchange Park<br>9850 Highway 78, Ladson, SC 29456</p>
+        <h2>Follow</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/ExchangeClubofCharlestonSC" rel="noopener">Exchange Club of Charleston on Facebook</a></li>
+          <li><a href="https://www.facebook.com/CoastalCarolinaFair" rel="noopener">Coastal Carolina Fair on Facebook</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
 </main>
 <!-- @include partials/footer.html -->
+<script type="module" src="/src/js/pages/contact.js"></script>
 </body>
 </html>
