@@ -25,7 +25,139 @@
       <p class="lede">Build leadership and friendships, and put your time behind the Lowcountry’s biggest fall tradition.</p>
     </div>
   </header>
+
+  <section class="section" aria-labelledby="why-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Why join</p>
+        <h2 id="why-title">Bring out the best in yourself — and in Charleston</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="cta-band__panel"><h3>Lead</h3><p>Build leadership and organizational skills that carry into business, family and personal life.</p></div>
+        <div class="cta-band__panel"><h3>Connect</h3><p>Get to know Charleston professionals over lunch every Thursday.</p></div>
+        <div class="cta-band__panel"><h3>Serve</h3><p>From a fair workday to a child-abuse prevention program, you’ll see the difference firsthand.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="involves-title">
+    <div class="container split">
+      <div class="prose">
+        <h2 id="involves-title">What membership involves</h2>
+        <ul>
+          <li>Lunch at noon every Thursday at the Charleston Rifle Club.</li>
+          <li>Volunteer shifts at the Coastal Carolina Fair and at fair workdays through the year.</li>
+          <li>A committee that fits your interests — from membership to scholarships.</li>
+          <li>Annual dues. <span class="club-note">Amount: club to confirm</span></li>
+        </ul>
+        <p>Not sure yet? <a href="meetings.html#rsvp">Come to a lunch as our guest</a> first.</p>
+      </div>
+      <figure class="photo">
+        <img src="/src/assets/img/join-members-960.webp" srcset="/src/assets/img/join-members-480.webp 480w, /src/assets/img/join-members-960.webp 960w, /src/assets/img/join-members-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Two members at the 2026 Spring Festival">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 id="faq-title">Questions</h2>
+      <div class="faq">
+        <details><summary>Can I visit before I apply?</summary><p>Yes. Guests are welcome at Thursday lunches marked “Guests welcome” — <a href="meetings.html#rsvp">reserve a seat</a>.</p></details>
+        <details><summary>When and where do you meet?</summary><p>Thursdays at 12:00 PM at the Charleston Rifle Club, 2221 Heriot St, Charleston.</p></details>
+        <details><summary>What does the fair ask of members?</summary><p>Members volunteer during the fair and at workdays through the year. <span class="club-note">Expected hours: club to confirm</span></p></details>
+        <details><summary>How much are dues?</summary><p><span class="club-note">Dues: club to confirm</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="apply" aria-labelledby="apply-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Two short steps</p>
+        <h2 id="apply-title">Start your application</h2>
+      </div>
+      <p class="demo-note no-js-only">The application needs JavaScript in this demo.</p>
+      <form class="flow js-only" data-flow="join" novalidate>
+        <p class="demo-note">Nothing is sent — this application stays in your browser.</p>
+        <ol class="stepper" data-stepper aria-label="Application progress"><li>Contact</li><li>About you</li></ol>
+        <p class="visually-hidden" data-step-status aria-live="polite"></p>
+        <p class="flow__status" data-form-status aria-live="polite"></p>
+        <fieldset data-step data-step-title="Contact">
+          <legend tabindex="-1" data-step-heading>How can we reach you?</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="join-first">First name</label>
+              <input id="join-first" name="first" autocomplete="given-name" aria-describedby="err-join-first">
+              <p class="field__error" id="err-join-first" data-error-for="first" hidden></p>
+            </div>
+            <div class="field">
+              <label for="join-last">Last name</label>
+              <input id="join-last" name="last" autocomplete="family-name" aria-describedby="err-join-last">
+              <p class="field__error" id="err-join-last" data-error-for="last" hidden></p>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="join-email">Email</label>
+              <input id="join-email" name="email" type="email" autocomplete="email" aria-describedby="err-join-email">
+              <p class="field__error" id="err-join-email" data-error-for="email" hidden></p>
+            </div>
+            <div class="field">
+              <label for="join-phone">Phone <span class="field__hint">(optional)</span></label>
+              <input id="join-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="err-join-phone">
+              <p class="field__error" id="err-join-phone" data-error-for="phone" hidden></p>
+            </div>
+          </div>
+          <div class="flow__actions"><button class="btn btn--primary" type="button" data-next>Continue</button></div>
+        </fieldset>
+        <fieldset data-step data-step-title="About you" hidden>
+          <legend tabindex="-1" data-step-heading>About you</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="join-occupation">Occupation or business <span class="field__hint">(optional)</span></label>
+              <input id="join-occupation" name="occupation" autocomplete="organization-title">
+            </div>
+            <div class="field">
+              <label for="join-heard">How did you hear about us?</label>
+              <select id="join-heard" name="heard">
+                <option value="">Choose one…</option>
+                <option value="member">A member</option>
+                <option value="fair">The Coastal Carolina Fair</option>
+                <option value="event">A club event</option>
+                <option value="online">Online</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="nested">
+            <legend>What interests you? Choose at least one.</legend>
+            <div class="choice-grid">
+              <label class="check"><input type="checkbox" name="interests" value="fair"> <span>Fair operations</span></label>
+              <label class="check"><input type="checkbox" name="interests" value="youth"> <span>Scholarships &amp; youth</span></label>
+              <label class="check"><input type="checkbox" name="interests" value="child-abuse-prevention"> <span>Child abuse prevention</span></label>
+              <label class="check"><input type="checkbox" name="interests" value="americanism"> <span>Americanism &amp; military</span></label>
+              <label class="check"><input type="checkbox" name="interests" value="community"> <span>Community service</span></label>
+            </div>
+            <p class="field__error" data-error-for="interests" hidden></p>
+          </fieldset>
+          <div class="flow__actions">
+            <button class="btn btn--secondary" type="button" data-back>Back</button>
+            <button class="btn btn--primary" type="submit">Send application</button>
+          </div>
+        </fieldset>
+      </form>
+      <div class="confirm" data-confirm="join" hidden tabindex="-1">
+        <p class="confirm__badge">Demo — application received</p>
+        <h3>Thanks, <span data-confirm-name></span>. We’ll be in touch.</h3>
+        <p>Your next step: join us as a guest at a Thursday lunch.</p>
+        <p>Reference <span class="confirm__ref" data-confirm-ref></span></p>
+        <div class="btn-row"><a class="btn btn--primary" href="meetings.html#rsvp">Reserve a guest seat</a></div>
+        <p class="demo-note">In production this would go to the Membership Committee chair. Here, nothing left your browser.</p>
+      </div>
+    </div>
+  </section>
 </main>
 <!-- @include partials/footer.html -->
+<script type="module" src="/src/js/pages/join.js"></script>
 </body>
 </html>
