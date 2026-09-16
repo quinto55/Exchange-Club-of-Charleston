@@ -70,15 +70,21 @@
 .card {
   position: relative; display: flex; flex-direction: column;
   background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg);
-  overflow: hidden; transition: box-shadow 0.2s;
+  overflow: hidden; transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
-.card:hover { box-shadow: var(--shadow-2); }
+.card:hover { box-shadow: var(--shadow-2); transform: translateY(var(--lift)); }
 .card:has(.card__link:focus-visible) { outline: 3px solid var(--navy); outline-offset: 3px; }
 .card__media { aspect-ratio: 3 / 2; overflow: hidden; background: var(--navy-tint); }
-.card__media img { width: 100%; height: 100%; object-fit: cover; }
+/* These are group photos: faces sit high in the frame, so a centred crop clips heads. */
+.card__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .card__body { display: grid; flex: 1; align-content: start; gap: var(--space-2); padding: var(--space-5); }
 .card__meta { color: var(--muted); font-size: var(--step--1); font-variant-numeric: tabular-nums; }
 .card__title { font: 700 1.2rem / 1.3 var(--font-serif); color: var(--navy); }
+/* In multi-column rows, reserve two lines so a title that wraps doesn't push its own
+   paragraph out of line with the neighbouring cards'. */
+@media (min-width: 760px) {
+  :is(.grid--3, .grid--4) .card__title { min-height: 2.6em; }
+}
 .card__link { color: inherit; text-decoration: none; }
 .card__link::after { content: ''; position: absolute; inset: 0; }
 .card__link:focus-visible { outline: none; }
@@ -90,7 +96,9 @@
 .place-card {
   display: grid; grid-template-columns: auto 1fr; align-items: center; gap: var(--space-4);
   padding: var(--space-4); background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg);
+  transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
+.place-card:hover { border-color: var(--navy); box-shadow: var(--shadow-1); transform: translateY(var(--lift)); }
 @media (min-width: 640px) { .place-card { grid-template-columns: auto 1fr auto; } }
 .place-card__date {
   display: grid; place-content: center; width: 4.75rem; aspect-ratio: 1;
@@ -111,6 +119,18 @@
 .place-card__tag--tentative { background: var(--linen); color: var(--gold-ink); border: 1px dashed var(--gold-ink); }
 .place-card__action { grid-column: 1 / -1; justify-self: start; }
 @media (min-width: 640px) { .place-card__action { grid-column: auto; } }
+
+/* ---------- Seal used at scale ---------- */
+/* The club emblem is the strongest identity asset on the site; at 52px in the header
+   it never gets to act like one. On a navy ground the seal's navy disc drops away and
+   only the gold engraving reads, which is the effect we want. */
+.sealed { position: relative; isolation: isolate; overflow: hidden; }
+.sealed > .seal {
+  position: absolute; z-index: -1; pointer-events: none;
+  right: -6rem; top: 50%; translate: 0 -50%;
+  width: min(28rem, 60%); height: auto; opacity: 0.1;
+}
+@media (max-width: 759px) { .sealed > .seal { opacity: 0.07; right: -9rem; } }
 
 /* ---------- Impact figures (inside .section--navy) ---------- */
 .impact { display: grid; gap: var(--space-5); margin: 0; padding: 0; list-style: none; grid-template-columns: 1fr; }

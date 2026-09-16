@@ -1,3 +1,36 @@
+/* ---------- Flow layout ---------- */
+/* A .flow caps at 46rem. On its own inside the 1200px container that leaves the right
+   half of the page empty, which is what made Join, the meetings RSVP and the portal
+   read as unfinished. Pair the form with standing context instead. */
+.flow-layout { display: grid; gap: var(--space-6); align-items: start; }
+@media (min-width: 1000px) {
+  .flow-layout { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--space-7); }
+}
+.flow-main { display: grid; gap: var(--space-5); min-width: 0; }
+.flow-main > .flow, .flow-main > .confirm { max-width: none; }
+.flow-aside { min-width: 0; }
+.flow-aside__inner { display: grid; gap: var(--space-4); }
+@media (min-width: 1000px) { .flow-aside__inner { position: sticky; top: 7rem; } }
+.flow-aside__card {
+  display: grid; align-content: start; gap: var(--space-3); padding: var(--space-5);
+  background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg);
+}
+.flow-aside__card--navy { background: var(--navy); border-color: var(--navy); color: var(--navy-tint); }
+.flow-aside__card--navy .flow-aside__title { color: var(--paper); }
+.flow-aside__card--navy a { color: var(--paper); }
+.flow-aside__title { color: var(--navy); font: 700 var(--step-1) / 1.3 var(--font-serif); }
+.flow-aside dl { display: grid; gap: var(--space-3); margin: 0; }
+.flow-aside dl > div { display: grid; gap: 0.1rem; }
+.flow-aside dt { color: var(--gold-ink); font: 600 var(--eyebrow) / 1.3 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; }
+.flow-aside__card--navy dt { color: var(--gold); }
+.flow-aside dd { margin: 0; }
+.flow-aside__note { color: var(--muted); font-size: var(--step--1); }
+/* The timeline dot is drawn to sit on the page ground; inside a white card it needs to match. */
+.flow-aside__card .timeline__item::before { background: var(--paper); }
+.flow-aside__card .timeline__item { padding-bottom: var(--space-5); }
+.flow-aside__card .timeline__year { font-size: 1.25rem; }
+.flow-aside__card--navy .flow-aside__note { color: var(--navy-tint); }
+
 /* ---------- Demo flows ---------- */
 .flow {
   display: grid; gap: var(--space-5); max-width: 46rem;
@@ -5,7 +38,7 @@
   background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg); box-shadow: var(--shadow-1);
 }
 .flow fieldset { display: grid; gap: var(--space-4); min-width: 0; margin: 0; padding: 0; border: 0; }
-.flow legend { margin-bottom: var(--space-2); padding: 0; color: var(--navy); font: 700 var(--step-1) / 1.25 var(--font-serif); }
+.flow legend { margin-bottom: var(--space-2); padding: 0; color: var(--navy); font: 700 var(--step-1-5) / 1.2 var(--font-serif); }
 .flow legend:focus { outline: none; }
 .flow .nested legend { font: 700 1rem / 1.3 var(--font-sans); color: var(--ink); }
 .stepper { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin: 0; padding: 0; list-style: none; counter-reset: step; color: var(--muted); font-size: var(--step--1); }
@@ -32,6 +65,10 @@
 @media (min-width: 600px) { .field-row { grid-template-columns: 1fr 1fr; } }
 .choice-grid { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); }
 .choice-grid--compact { grid-template-columns: repeat(auto-fill, minmax(min(100%, 7rem), 1fr)); }
+/* auto-fill resolves to 3 columns at flow width, so any four-item set orphans the last
+   card onto a row of its own. Pin the four-item sets to 2x2. */
+.choice-grid--2 { grid-template-columns: 1fr; }
+@media (min-width: 560px) { .choice-grid--2 { grid-template-columns: repeat(2, 1fr); } }
 .choice { position: relative; display: grid; }
 .choice input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
 .choice__label {

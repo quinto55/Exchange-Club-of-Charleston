@@ -2,12 +2,13 @@
 
 /* ---------- Home ---------- */
 .home-hero { padding-block: clamp(var(--space-6), 6vw, var(--space-8)); }
-.home-hero__inner { display: grid; align-items: center; gap: var(--space-7); }
+.home-hero__inner { display: grid; align-items: start; gap: var(--space-7); }
 .home-hero__text { display: grid; gap: var(--space-5); }
 .home-hero__text .lede { font-size: 1.25rem; }
 .home-hero__media { position: relative; display: grid; gap: var(--space-5); }
 @media (min-width: 900px) {
   .home-hero__inner { grid-template-columns: 1.05fr 1fr; }
+  .home-hero__text { padding-top: var(--space-6); }
   /* Stay clear of the card's 20rem width plus its overhang, not just a flat share of the column. */
   .home-hero__photo figcaption { max-width: min(42%, calc(100% - 21rem)); }
   .home-hero__fair { position: relative; margin: -5rem calc(-1 * var(--space-4)) 0 auto; width: min(20rem, 80%); }
@@ -66,8 +67,24 @@
 .contact-main { display: grid; gap: var(--space-4); }
 
 /* ---------- Member portal ---------- */
-.portal-gate { display: grid; gap: var(--space-4); max-width: 40rem; padding: var(--space-6); background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg); box-shadow: var(--shadow-1); }
-.portal-gate .btn { justify-self: start; }
+/* The gate used to be a 40rem card alone in the container, so the portal — the most
+   substantial thing in the demo — opened on an empty page. Pair it with a look inside. */
+.portal-gate {
+  display: grid; overflow: hidden;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius-lg); box-shadow: var(--shadow-1);
+}
+@media (min-width: 860px) { .portal-gate { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+.portal-gate__signin,
+.portal-gate__preview { display: grid; align-content: center; gap: var(--space-4); padding: clamp(var(--space-5), 4vw, var(--space-7)); }
+.portal-gate__signin .btn { justify-self: start; margin-top: var(--space-2); }
+.portal-gate__preview { background: var(--navy); color: var(--navy-tint); }
+.portal-gate__preview .eyebrow { color: var(--gold); }
+.portal-peek { display: grid; gap: var(--space-4); margin: 0; padding: 0; list-style: none; }
+.portal-peek li { display: grid; gap: 0.15rem; padding-top: var(--space-3); border-top: 1px solid color-mix(in srgb, var(--navy-tint) 22%, transparent); }
+.portal-peek li:first-child { padding-top: 0; border-top: 0; }
+.portal-peek__value { color: var(--paper); font: 400 clamp(2rem, 3.4vw, 2.6rem) / 1 var(--font-display); font-variant-numeric: tabular-nums; }
+.portal-peek__label { color: var(--navy-tint); font-size: 0.98rem; }
+.portal-gate__preview .flow-aside__note { color: var(--navy-tint); }
 .portal-dash { display: grid; gap: var(--space-5); }
 .portal-dash__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); }
 .portal-dash > h3 { font: 400 var(--step-2) / 1.1 var(--font-serif); }

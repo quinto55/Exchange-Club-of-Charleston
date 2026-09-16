@@ -72,6 +72,8 @@
         <p class="lede">Pick a Thursday and tell us who’s coming.</p>
       </div>
       <p class="demo-note no-js-only">The RSVP form needs JavaScript in this demo.</p>
+      <div class="flow-layout">
+      <div class="flow-main">
       <form class="flow js-only" data-flow="rsvp" novalidate>
         <p class="demo-note">Nothing is sent — this RSVP stays in your browser.</p>
         <ol class="stepper" data-stepper aria-label="RSVP progress"><li>Choose a date</li><li>Your details</li></ol>
@@ -117,6 +119,35 @@
           <button class="btn btn--secondary" type="button" data-restart>Reserve another seat</button>
         </div>
         <p class="demo-note">In production this would email you a confirmation and tell the Meeting Administration committee. Here, nothing left your browser.</p>
+      </div>
+      </div>
+      <aside class="flow-aside" aria-label="Where and when we meet">
+        <div class="flow-aside__inner">
+          <div class="flow-aside__card flow-aside__card--navy sealed">
+            <!-- @include partials/seal.html -->
+            <p class="flow-aside__title">Where to find us</p>
+            <dl>
+              <div>
+                <dt>Every</dt>
+                <dd>Thursday at 12:00 PM</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>Charleston Rifle Club</dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>2221 Heriot St, Charleston, SC 29403<br><a href="https://maps.google.com/?q=32.814137,-79.957306" rel="noopener">Open in Google Maps</a></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="flow-aside__card">
+            <p class="flow-aside__title">As our guest</p>
+            <p>Lunch is on the club for first-time guests. Come as you are, and plan for about an hour including the speaker.</p>
+            <p class="club-note">Guest lunch policy: club to confirm</p>
+          </div>
+        </div>
+      </aside>
       </div>
     </div>
   </section>

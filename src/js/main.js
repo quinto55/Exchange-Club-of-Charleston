@@ -2,6 +2,7 @@ import { CLUB, FAIR } from '../data/club.js';
 import { MEETINGS } from '../data/meetings.js';
 import { countdownState, countdownText, meetingDateParts, upcomingMeetings } from './lib/dates.js';
 import { renderMeetingCards } from './lib/meeting-cards.js';
+import { mountCountUp } from './lib/countup.js';
 
 /** Mobile menu: toggle button, Escape to close, close after choosing a link. */
 export function initMenu(doc = document) {
@@ -79,4 +80,5 @@ export function init(doc = document) {
   initNextMeeting(doc);
   initCountdowns(doc);
   initMeetingLists(doc);
+  mountCountUp(doc.body);
 }

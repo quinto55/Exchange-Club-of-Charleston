@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { loadPage } from './helpers/load-page.js';
 import { SHIFTS, ROSTER } from '../src/data/portal-demo.js';
 import {
-  PORTAL_SESSION_KEY, PORTAL_STATE_KEY, initialPortalState, shiftCount, isFull, toggleShift, toggleCommittee, filterRoster, mountPortal,
+  PORTAL_SESSION_KEY, PORTAL_STATE_KEY, initialPortalState, shiftCount, isFull, toggleShift, toggleCommittee, filterRoster, mountPortal, portalPeek,
 } from '../src/js/flows/portal.js';
 
 const memory = () => {
@@ -11,6 +11,23 @@ const memory = () => {
 };
 const click = (el) => el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
 const byId = (id) => SHIFTS.find((s) => s.id === id);
+
+describe('portal peek', () => {
+  it('derives the sign-in teaser from the demo data, not hardcoded copy', () => {
+    const peek = portalPeek();
+    const openSpots = SHIFTS.reduce((n, s) => n + Math.max(0, s.capacity - s.filled), 0);
+    expect(peek.openSpots).toBe(openSpots);
+    expect(peek.shiftsNeedingHands).toBe(SHIFTS.filter((s) => s.filled < s.capacity).length);
+    expect(peek.members).toBe(ROSTER.length);
+    expect(peek.duesPaidThrough).toBe('June 30, 2027');
+  });
+
+  it('never reports negative openings when a shift is over capacity', () => {
+    const peek = portalPeek([{ id: 'x', capacity: 4, filled: 9 }], ROSTER);
+    expect(peek.openSpots).toBe(0);
+    expect(peek.shiftsNeedingHands).toBe(0);
+  });
+});
 
 describe('portal state', () => {
   it("starts with the demo member's committee and no shifts", () => {
