@@ -183,6 +183,34 @@
 .page-hero { padding-block: clamp(var(--space-7), 7vw, var(--space-8)) var(--space-6); border-bottom: 1px solid var(--rule); }
 .page-hero .container { display: grid; gap: var(--space-4); }
 .page-hero .lede { font-size: 1.25rem; }
+
+/* Image variant. Ten interior pages opened on the same thin rule; the fair hero was
+   the only page with an entry moment. The photo sits under a navy ground at reduced
+   opacity behind a directional scrim — forgiving of a middling source image, which
+   most of the club's photographs are. */
+.page-hero--image {
+  position: relative; isolation: isolate; overflow: hidden;
+  padding-block: clamp(var(--space-8), 9vw, 7rem);
+  background: var(--navy-deep); color: var(--linen); border-bottom: 0;
+}
+.page-hero__bg { position: absolute; inset: 0; z-index: -2; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: 0.36; }
+.page-hero--image::after {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, var(--navy-deep) 20%, color-mix(in srgb, var(--navy-deep) 45%, transparent) 68%, transparent 100%);
+}
+.page-hero--image h1, .page-hero--image .lede { max-width: 46rem; }
+.page-hero--image h1 { color: var(--paper); }
+.page-hero--image .lede { color: var(--navy-tint); }
+.page-hero--image .eyebrow { color: var(--gold); }
+.page-hero--image .breadcrumb ol, .page-hero--image .breadcrumb a { color: var(--navy-tint); }
+.page-hero--image .breadcrumb [aria-current='page'] { color: var(--paper); }
+
+/* ---------- Oversized statement band ---------- */
+.statement { display: grid; justify-items: center; gap: var(--space-3); max-width: 46rem; margin-inline: auto; text-align: center; }
+.statement__figure { color: var(--paper); font: 400 clamp(3.4rem, 8.5vw, 6rem) / 0.95 var(--font-display); font-variant-numeric: tabular-nums; }
+.statement__text { color: var(--navy-tint); font-size: 1.15rem; line-height: 1.55; }
+.statement__note { color: var(--navy-tint); font-size: var(--step--1); }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: var(--step--1); }
 .breadcrumb li + li::before { content: '/'; margin-right: var(--space-2); }
 .breadcrumb a { color: var(--muted); }
@@ -201,6 +229,28 @@
 .timeline__year { color: var(--navy); font: 400 1.6rem / 1 var(--font-display); font-variant-numeric: tabular-nums; }
 .timeline__text { max-width: 56ch; }
 
+/* Split variant: the single narrow column left a 1200px container two-thirds empty on
+   About and the Fair. Alternates across a centred spine at desk widths and falls back
+   to the plain column below 900px. Not for the timeline inside a flow aside. */
+@media (min-width: 900px) {
+  .timeline--split {
+    display: block; position: relative;
+    max-width: 66rem; margin: 0 auto; padding: 0; border-left: 0;
+  }
+  .timeline--split::before {
+    content: ''; position: absolute; left: 50%; top: 0.5rem; bottom: 0.5rem;
+    width: 2px; background: var(--gold); translate: -1px 0;
+  }
+  .timeline--split .timeline__item { width: calc(50% - var(--space-7)); padding: 0 0 var(--space-7) 0; }
+  .timeline--split .timeline__item:nth-child(odd) { text-align: right; }
+  .timeline--split .timeline__item:nth-child(even) { margin-left: calc(50% + var(--space-7)); }
+  .timeline--split .timeline__item::before { top: 0.5rem; }
+  .timeline--split .timeline__item:nth-child(odd)::before { left: auto; right: calc(-1 * var(--space-7) - 0.55rem); }
+  .timeline--split .timeline__item:nth-child(even)::before { left: calc(-1 * var(--space-7) - 0.55rem); }
+  .timeline--split .timeline__year { font-size: 2.6rem; }
+  .timeline--split .timeline__text { max-width: none; }
+}
+
 /* ---------- Covenant plaque ---------- */
 .plaque {
   max-width: 48rem; margin-inline: auto;
@@ -212,6 +262,10 @@
 .plaque__rule { width: 4rem; height: 2px; margin: var(--space-4) auto var(--space-5); background: var(--gold); border: 0; }
 .plaque__text { display: grid; gap: var(--space-3); color: var(--ink); font: italic 400 1.1rem / 1.6 var(--font-serif); text-align: left; }
 .plaque__text p:first-child { font-style: normal; font-weight: 700; }
+/* On navy the plaque reads as an engraved tablet rather than a page element. */
+.plaque--navy { background: color-mix(in srgb, var(--navy-deep) 82%, transparent); border-color: var(--gold); box-shadow: var(--shadow-2); }
+.plaque--navy .plaque__title { color: var(--paper); }
+.plaque--navy .plaque__text { color: var(--linen); }
 
 /* ---------- Pull quote, photo, notes ---------- */
 .pullquote { display: grid; justify-items: center; gap: var(--space-3); max-width: 46rem; margin-inline: auto; text-align: center; }

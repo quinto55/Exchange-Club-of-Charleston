@@ -14,7 +14,12 @@
 <body data-page="programs">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
+  <header class="page-hero page-hero--image">
+    <div class="page-hero__bg">
+      <img src="/src/assets/img/story-workday-960.webp"
+           srcset="/src/assets/img/story-workday-480.webp 480w, /src/assets/img/story-workday-960.webp 960w, /src/assets/img/story-workday-1600.webp 1600w"
+           sizes="100vw" width="1600" height="1067" fetchpriority="high" decoding="async" alt="">
+    </div>
     <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
@@ -107,6 +112,18 @@
           <a class="btn btn--give" href="give.html?fund=scholarships">Fund a scholarship</a>
           <a class="btn btn--secondary" href="story-scholarships-2024.html">Read: 30 scholarships</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy sealed" aria-labelledby="programs-figure-title">
+    <!-- @include partials/seal.html -->
+    <div class="container">
+      <div class="statement">
+        <h2 class="visually-hidden" id="programs-figure-title">In numbers</h2>
+        <p class="statement__figure">$504K+</p>
+        <p class="statement__text">granted to 90+ local nonprofits and students after the latest fair — the money behind all four programs.</p>
+        <p class="statement__note">Figures published by the Coastal Carolina Fair.</p>
       </div>
     </div>
   </section>

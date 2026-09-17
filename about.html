@@ -14,7 +14,12 @@
 <body data-page="about">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
+  <header class="page-hero page-hero--image">
+    <div class="page-hero__bg">
+      <img src="/src/assets/img/about-gavel-960.webp"
+           srcset="/src/assets/img/about-gavel-480.webp 480w, /src/assets/img/about-gavel-960.webp 960w, /src/assets/img/about-gavel-1600.webp 1600w"
+           sizes="100vw" width="1600" height="1067" fetchpriority="high" decoding="async" alt="">
+    </div>
     <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
@@ -45,11 +50,11 @@
 
   <section class="section section--tint" aria-labelledby="timeline-title">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--center">
         <p class="eyebrow">Our history</p>
         <h2 id="timeline-title">Since 1923</h2>
       </div>
-      <ol class="timeline">
+      <ol class="timeline timeline--split">
         <li class="timeline__item"><span class="timeline__year">1923</span><p class="timeline__text">The club is organized on May 10.</p></li>
         <li class="timeline__item"><span class="timeline__year">1924</span><p class="timeline__text">Chartered on April 15.</p></li>
         <li class="timeline__item"><span class="timeline__year">1957</span><p class="timeline__text">The club takes ownership of the Charleston County fair — today’s Coastal Carolina Fair.</p></li>
@@ -60,9 +65,10 @@
     </div>
   </section>
 
-  <section class="section" id="covenant" aria-labelledby="covenant-title">
+  <section class="section section--navy sealed" id="covenant" aria-labelledby="covenant-title">
+    <!-- @include partials/seal.html -->
     <div class="container">
-      <div class="plaque">
+      <div class="plaque plaque--navy">
         <h2 class="plaque__title" id="covenant-title">The Exchange Covenant</h2>
         <hr class="plaque__rule">
         <div class="plaque__text">

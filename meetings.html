@@ -14,7 +14,12 @@
 <body data-page="meetings">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
+  <header class="page-hero page-hero--image">
+    <div class="page-hero__bg">
+      <img src="/src/assets/img/story-appreciation-960.webp"
+           srcset="/src/assets/img/story-appreciation-480.webp 480w, /src/assets/img/story-appreciation-960.webp 960w, /src/assets/img/story-appreciation-1600.webp 1600w"
+           sizes="100vw" width="1600" height="1066" fetchpriority="high" decoding="async" alt="">
+    </div>
     <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
@@ -61,6 +66,17 @@
       </ul>
       <p>The club calendar also lists the <a href="fair.html">Coastal Carolina Fair</a>, October 29 – November 8, 2026.</p>
       <div class="btn-row js-only"><button class="btn btn--secondary" type="button" data-subscribe>Add these meetings to my calendar</button></div>
+    </div>
+  </section>
+
+  <section class="section section--navy sealed" aria-labelledby="meetings-figure-title">
+    <!-- @include partials/seal.html -->
+    <div class="container">
+      <div class="statement">
+        <h2 class="visually-hidden" id="meetings-figure-title">In numbers</h2>
+        <p class="statement__figure">Thursdays</p>
+        <p class="statement__text">Lunch at noon at the Charleston Rifle Club, every week of the year. Guests are welcome at any meeting marked “Guests welcome.”</p>
+      </div>
     </div>
   </section>
 
