@@ -19,7 +19,7 @@ describe('application rules', () => {
   it('requires at least one interest', () => {
     expect(validateAbout({ interests: [] })).toEqual({ interests: 'Choose at least one interest.' });
     expect(validateAbout({ interests: ['fair'] })).toEqual({});
-    expect(INTERESTS.map((i) => i.id)).toEqual(['fair', 'youth', 'child-abuse-prevention', 'americanism', 'community']);
+    expect(INTERESTS.map((i) => i.id)).toEqual(['fair', 'youth', 'child-abuse-prevention', 'patriotism', 'community']);
   });
 });
 

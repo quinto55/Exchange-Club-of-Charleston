@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { loadPage } from './helpers/load-page.js';
 
-const ids = ['child-abuse-prevention', 'americanism', 'youth', 'community-service'];
+const ids = ['child-abuse-prevention', 'patriotism', 'youth', 'community-service'];
 
 describe('programs page', () => {
   beforeAll(() => loadPage('programs.html'));

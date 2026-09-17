@@ -29,7 +29,7 @@ describe('home page', () => {
   it('links the four programs to their anchors', () => {
     expect(hrefs('section[aria-labelledby="programs-title"] .card__link')).toEqual([
       'programs.html#child-abuse-prevention',
-      'programs.html#americanism',
+      'programs.html#patriotism',
       'programs.html#youth',
       'programs.html#community-service',
     ]);

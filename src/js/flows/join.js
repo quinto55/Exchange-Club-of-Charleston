@@ -7,7 +7,7 @@ export const INTERESTS = [
   { id: 'fair', label: 'Fair operations' },
   { id: 'youth', label: 'Scholarships & youth' },
   { id: 'child-abuse-prevention', label: 'Child abuse prevention' },
-  { id: 'americanism', label: 'Americanism & military' },
+  { id: 'patriotism', label: 'Patriotism & military' },
   { id: 'community', label: 'Community service' },
 ];
 
