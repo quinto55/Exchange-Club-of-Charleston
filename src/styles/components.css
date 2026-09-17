@@ -144,7 +144,7 @@
 /* ---------- Fair card (fair palette) ---------- */
 .fair-card {
   position: relative; display: grid; justify-items: center; gap: var(--space-2);
-  padding: var(--space-7) var(--space-5) var(--space-6);
+  padding: var(--space-6) var(--space-5) var(--space-5);
   background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--fair-dusk) 75%, var(--navy)) 0%, var(--fair-dusk) 65%);
   color: var(--paper); border-radius: var(--radius-lg); box-shadow: var(--shadow-2);
   text-align: center; overflow: hidden;
@@ -153,7 +153,7 @@
   content: ''; position: absolute; inset: 12px 14px auto; height: 8px;
   background: radial-gradient(circle, var(--fair-bulb) 2.2px, transparent 2.9px) 0 0 / 18px 8px repeat-x;
 }
-.fair-card__logo { width: 120px; height: auto; }
+.fair-card__logo { width: 92px; height: auto; }
 .fair-card__eyebrow { color: var(--fair-bulb); font: 600 var(--eyebrow) / 1.2 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; }
 .fair-card__title { color: var(--paper); font: 400 1.9rem / 1.1 var(--font-display); }
 .fair-card__dates { color: var(--fair-bulb); font: 700 1.35rem / 1.2 var(--font-sans); font-variant-numeric: tabular-nums; }
@@ -163,7 +163,8 @@
   border: 1px solid color-mix(in srgb, var(--fair-bulb) 45%, transparent); border-radius: 999px;
   color: var(--paper); font: 600 0.95rem / 1.4 var(--font-sans); font-variant-numeric: tabular-nums;
 }
-.fair-card__actions { display: grid; justify-items: center; gap: var(--space-3); margin-top: var(--space-3); }
+.fair-card__body { display: grid; justify-items: inherit; gap: var(--space-2); }
+.fair-card__actions { display: grid; justify-items: center; gap: var(--space-3); margin-top: var(--space-2); }
 .fair-card__link { color: var(--paper); font-weight: 600; }
 
 /* ---------- Fair page hero (fair palette) ---------- */

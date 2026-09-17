@@ -2,16 +2,24 @@
 
 /* ---------- Home ---------- */
 .home-hero { padding-block: clamp(var(--space-6), 6vw, var(--space-8)); }
-.home-hero__inner { display: grid; align-items: start; gap: var(--space-7); }
+.home-hero__inner { display: grid; align-items: center; gap: var(--space-7); }
 .home-hero__text { display: grid; gap: var(--space-5); }
 .home-hero__text .lede { font-size: 1.25rem; }
 .home-hero__media { position: relative; display: grid; gap: var(--space-5); }
 @media (min-width: 900px) {
   .home-hero__inner { grid-template-columns: 1.05fr 1fr; }
-  .home-hero__text { padding-top: var(--space-6); }
-  /* Stay clear of the card's 20rem width plus its overhang, not just a flat share of the column. */
-  .home-hero__photo figcaption { max-width: min(42%, calc(100% - 21rem)); }
-  .home-hero__fair { position: relative; margin: -5rem calc(-1 * var(--space-4)) 0 auto; width: min(20rem, 80%); }
+  /* The card is what unbalanced the hero: a 457px-taller media column beside short copy.
+     Out of that column it becomes a full-width banner, which suits the flagship fundraiser
+     better anyway, and copy and photo are near enough the same height on their own. */
+  .home-hero__fair {
+    grid-column: 1 / -1; width: auto; margin: var(--space-2) 0 0;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    justify-items: start; align-items: center; text-align: left;
+    gap: var(--space-5) var(--space-7);
+    padding: var(--space-5) var(--space-6);
+  }
+  .home-hero__fair .fair-card__actions { justify-items: end; margin-top: 0; }
+  .home-hero__fair .fair-card__title { font-size: 2.2rem; }
   /* The split column is too narrow for the place-card's third (action) column without wrapping the meta line. */
   .split [data-meeting-list] .place-card { grid-template-columns: auto 1fr; }
   .split [data-meeting-list] .place-card__action { grid-column: 1 / -1; justify-self: start; }
