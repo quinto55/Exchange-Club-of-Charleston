@@ -14,7 +14,12 @@
 <body data-page="join">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
+  <header class="page-hero page-hero--image">
+    <div class="page-hero__bg">
+      <img src="/src/assets/img/program-community-960.webp"
+           srcset="/src/assets/img/program-community-480.webp 480w, /src/assets/img/program-community-960.webp 960w, /src/assets/img/program-community-1600.webp 1600w"
+           sizes="100vw" width="1600" height="1067" fetchpriority="high" decoding="async" alt="">
+    </div>
     <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
@@ -60,8 +65,12 @@
   </section>
 
   <section class="section" aria-labelledby="faq-title">
-    <div class="container">
-      <h2 id="faq-title">Questions</h2>
+    <div class="container split">
+      <div class="section-head">
+        <p class="eyebrow">Before you apply</p>
+        <h2 id="faq-title">Questions</h2>
+        <p class="lede">Anything we haven’t covered here? <a href="contact.html">Ask the club</a> and a member will get back to you.</p>
+      </div>
       <div class="faq">
         <details><summary>Can I visit before I apply?</summary><p>Yes. Guests are welcome at Thursday lunches marked “Guests welcome” — <a href="meetings.html#rsvp">reserve a seat</a>.</p></details>
         <details><summary>When and where do you meet?</summary><p>Thursdays at 12:00 PM at the Charleston Rifle Club, 2221 Heriot St, Charleston.</p></details>
@@ -78,6 +87,8 @@
         <h2 id="apply-title">Start your application</h2>
       </div>
       <p class="demo-note no-js-only">The application needs JavaScript in this demo.</p>
+      <div class="flow-layout">
+      <div class="flow-main">
       <form class="flow js-only" data-flow="join" novalidate>
         <p class="demo-note">Nothing is sent — this application stays in your browser.</p>
         <ol class="stepper" data-stepper aria-label="Application progress"><li>Contact</li><li>About you</li></ol>
@@ -136,7 +147,7 @@
               <label class="check"><input type="checkbox" name="interests" value="fair"> <span>Fair operations</span></label>
               <label class="check"><input type="checkbox" name="interests" value="youth"> <span>Scholarships &amp; youth</span></label>
               <label class="check"><input type="checkbox" name="interests" value="child-abuse-prevention"> <span>Child abuse prevention</span></label>
-              <label class="check"><input type="checkbox" name="interests" value="americanism"> <span>Americanism &amp; military</span></label>
+              <label class="check"><input type="checkbox" name="interests" value="patriotism"> <span>Patriotism &amp; military</span></label>
               <label class="check"><input type="checkbox" name="interests" value="community"> <span>Community service</span></label>
             </div>
             <p class="field__error" data-error-for="interests" hidden></p>
@@ -154,6 +165,28 @@
         <p>Reference <span class="confirm__ref" data-confirm-ref></span></p>
         <div class="btn-row"><a class="btn btn--primary" href="meetings.html#rsvp">Reserve a guest seat</a></div>
         <p class="demo-note">In production this would go to the Membership Committee chair. Here, nothing left your browser.</p>
+      </div>
+      </div>
+      <aside class="flow-aside" aria-label="About applying">
+        <div class="flow-aside__inner">
+          <div class="flow-aside__card flow-aside__card--navy sealed">
+            <!-- @include partials/seal.html -->
+            <p class="flow-aside__title">Rather visit first?</p>
+            <p>Guests are welcome at any Thursday lunch. Come meet the club over lunch before you apply — there is no obligation.</p>
+            <p><a href="meetings.html#rsvp">Reserve a guest seat</a></p>
+          </div>
+          <div class="flow-aside__card">
+            <p class="flow-aside__title">What happens next</p>
+            <ol class="timeline">
+              <li class="timeline__item"><span class="timeline__year">1</span><span class="timeline__text">A member of the Membership Committee follows up with you.</span></li>
+              <li class="timeline__item"><span class="timeline__year">2</span><span class="timeline__text">You join a Thursday lunch as a guest and meet the club.</span></li>
+              <li class="timeline__item"><span class="timeline__year">3</span><span class="timeline__text">A current member sponsors your application.</span></li>
+              <li class="timeline__item"><span class="timeline__year">4</span><span class="timeline__text">You are welcomed and introduced at a Thursday lunch.</span></li>
+            </ol>
+            <p class="club-note">Steps and timing: club to confirm</p>
+          </div>
+        </div>
+      </aside>
       </div>
     </div>
   </section>

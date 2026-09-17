@@ -19,12 +19,14 @@ export function validateRsvpDetails({ name, email }) {
   return errors;
 }
 
+/* The venue is stated once in the panel beside this form, so the chips carry only
+   the date and time rather than repeating it five times. */
 function choiceHtml(meeting) {
   const note = meeting.tentative ? ' · Tentative' : '';
   return (
     `<label class="choice"><input type="radio" name="meeting" value="${meeting.date}">` +
     `<span class="choice__label"><strong>${meetingDateParts(meeting.date).short}</strong>` +
-    `<span>${CLUB.meeting.time} · ${CLUB.meeting.venue}${note}</span></span></label>`
+    `<span>${CLUB.meeting.time}${note}</span></span></label>`
   );
 }
 

@@ -14,7 +14,12 @@
 <body data-page="meetings">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
+  <header class="page-hero page-hero--image">
+    <div class="page-hero__bg">
+      <img src="/src/assets/img/story-appreciation-960.webp"
+           srcset="/src/assets/img/story-appreciation-480.webp 480w, /src/assets/img/story-appreciation-960.webp 960w, /src/assets/img/story-appreciation-1600.webp 1600w"
+           sizes="100vw" width="1600" height="1066" fetchpriority="high" decoding="async" alt="">
+    </div>
     <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
@@ -64,6 +69,17 @@
     </div>
   </section>
 
+  <section class="section section--navy sealed" aria-labelledby="meetings-figure-title">
+    <!-- @include partials/seal.html -->
+    <div class="container">
+      <div class="statement">
+        <h2 class="visually-hidden" id="meetings-figure-title">In numbers</h2>
+        <p class="statement__figure">Thursdays</p>
+        <p class="statement__text">Lunch at noon at the Charleston Rifle Club, every week of the year. Guests are welcome at any meeting marked “Guests welcome.”</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="rsvp" aria-labelledby="rsvp-title">
     <div class="container">
       <div class="section-head">
@@ -72,6 +88,8 @@
         <p class="lede">Pick a Thursday and tell us who’s coming.</p>
       </div>
       <p class="demo-note no-js-only">The RSVP form needs JavaScript in this demo.</p>
+      <div class="flow-layout">
+      <div class="flow-main">
       <form class="flow js-only" data-flow="rsvp" novalidate>
         <p class="demo-note">Nothing is sent — this RSVP stays in your browser.</p>
         <ol class="stepper" data-stepper aria-label="RSVP progress"><li>Choose a date</li><li>Your details</li></ol>
@@ -117,6 +135,35 @@
           <button class="btn btn--secondary" type="button" data-restart>Reserve another seat</button>
         </div>
         <p class="demo-note">In production this would email you a confirmation and tell the Meeting Administration committee. Here, nothing left your browser.</p>
+      </div>
+      </div>
+      <aside class="flow-aside" aria-label="Where and when we meet">
+        <div class="flow-aside__inner">
+          <div class="flow-aside__card flow-aside__card--navy sealed">
+            <!-- @include partials/seal.html -->
+            <p class="flow-aside__title">Where to find us</p>
+            <dl>
+              <div>
+                <dt>Every</dt>
+                <dd>Thursday at 12:00 PM</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>Charleston Rifle Club</dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>2221 Heriot St, Charleston, SC 29403<br><a href="https://maps.google.com/?q=32.814137,-79.957306" rel="noopener">Open in Google Maps</a></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="flow-aside__card">
+            <p class="flow-aside__title">As our guest</p>
+            <p>Lunch is on the club for first-time guests. Come as you are, and plan for about an hour including the speaker.</p>
+            <p class="club-note">Guest lunch policy: club to confirm</p>
+          </div>
+        </div>
+      </aside>
       </div>
     </div>
   </section>

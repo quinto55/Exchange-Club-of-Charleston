@@ -24,6 +24,15 @@ export function toggleCommittee(state, name) {
   return { ...state, committees };
 }
 
+/** Figures for the sign-in teaser, derived from the demo data so the two can't drift apart. */
+export const portalPeek = (shifts = SHIFTS, roster = ROSTER, member = DEMO_MEMBER) => ({
+  openSpots: shifts.reduce((total, shift) => total + Math.max(0, shift.capacity - shift.filled), 0),
+  shiftsNeedingHands: shifts.filter((shift) => shift.filled < shift.capacity).length,
+  members: roster.length,
+  committees: COMMITTEES.length,
+  duesPaidThrough: member.duesPaidThrough,
+});
+
 export function filterRoster(roster, query) {
   const q = query.trim().toLowerCase();
   return q ? roster.filter((m) => `${m.name} ${m.committee}`.toLowerCase().includes(q)) : roster;
@@ -90,6 +99,16 @@ export function mountPortal(root, { session = webStore('sessionStorage'), storag
   $('[data-announcements]').innerHTML = ANNOUNCEMENTS.map(
     (a) => `<li><time datetime="${a.date}">${a.label}</time><span>${a.text}</span></li>`,
   ).join('');
+  const peek = portalPeek();
+  const setPeek = (key, value) => {
+    const el = $(`[data-peek="${key}"]`);
+    if (el) el.textContent = value;
+  };
+  setPeek('spots', String(peek.openSpots));
+  setPeek('shifts', `spots open across ${peek.shiftsNeedingHands} fair shifts`);
+  setPeek('members', String(peek.members));
+  setPeek('committees', String(peek.committees));
+  setPeek('dues', peek.duesPaidThrough);
   renderAll();
   try {
     show(session?.getItem(PORTAL_SESSION_KEY) === 'demo');

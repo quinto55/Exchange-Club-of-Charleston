@@ -23,6 +23,9 @@
   --step--1: 0.875rem;
   --step-0: 1.0625rem;
   --step-1: 1.33rem;
+  /* Sub-heads inside panels and flows: the gap between --step-1 and --step-2 was
+     wide enough that legends and card titles collapsed to the same size. */
+  --step-1-5: clamp(1.5rem, 1.1rem + 1vw, 1.75rem);
   --step-2: clamp(1.9rem, 3.5vw, 2.6rem);
   --step-3: clamp(2.6rem, 6vw, 4.2rem);
   --eyebrow: 0.78rem;
@@ -44,6 +47,12 @@
   --scrim: rgb(10 14 38 / 0.72);
   --container: 1200px;
   --measure: 66ch;
+
+  /* Motion. Every use sits behind the prefers-reduced-motion guard in base.css. */
+  --dur-fast: 120ms;
+  --dur: 180ms;
+  --ease: cubic-bezier(0.2, 0, 0.1, 1);
+  --lift: -2px;
 
   color-scheme: light;
 }

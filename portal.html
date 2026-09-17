@@ -32,9 +32,31 @@
       <p class="demo-note no-js-only">The member portal preview needs JavaScript.</p>
       <div class="portal js-only" data-portal>
         <div class="portal-gate" data-portal-gate>
-          <h3>Sign in</h3>
-          <p>In production, members sign in with their own account. This preview uses a fictional member and fictional data — nothing you do here leaves your browser.</p>
-          <button class="btn btn--primary" type="button" data-portal-enter>Continue as demo member</button>
+          <div class="portal-gate__signin">
+            <p class="eyebrow">Members only</p>
+            <h3>Sign in</h3>
+            <p>In production, members sign in with their own account. This preview uses a fictional member and fictional data — nothing you do here leaves your browser.</p>
+            <button class="btn btn--primary" type="button" data-portal-enter>Continue as demo member</button>
+          </div>
+          <div class="portal-gate__preview sealed">
+            <!-- @include partials/seal.html -->
+            <p class="eyebrow">Inside the portal</p>
+            <ul class="portal-peek">
+              <li>
+                <span class="portal-peek__value" data-peek="spots">—</span>
+                <span class="portal-peek__label" data-peek="shifts">fair shifts open</span>
+              </li>
+              <li>
+                <span class="portal-peek__value">Roster</span>
+                <span class="portal-peek__label"><span data-peek="members">—</span> members across <span data-peek="committees">—</span> committees, searchable by name</span>
+              </li>
+              <li>
+                <span class="portal-peek__value">Dues</span>
+                <span class="portal-peek__label">paid through <span data-peek="dues">—</span></span>
+              </li>
+            </ul>
+            <p class="flow-aside__note">Fictional member and fictional data — nothing here is a real club record.</p>
+          </div>
         </div>
         <div class="portal-dash" data-portal-dash hidden>
           <div class="portal-dash__bar">

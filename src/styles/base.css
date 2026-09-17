@@ -30,6 +30,7 @@ strong { font-weight: 700; }
 .site-footer :focus-visible,
 .utility-bar :focus-visible,
 .fair-hero :focus-visible,
+.page-hero--image :focus-visible,
 .fair-card :focus-visible,
 .cta-band__panel--navy :focus-visible { outline-color: var(--gold); }
 main:focus { outline: none; }

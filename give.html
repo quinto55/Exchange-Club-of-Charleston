@@ -14,7 +14,12 @@
 <body data-page="give">
 <!-- @include partials/header.html -->
 <main id="main" tabindex="-1">
-  <header class="page-hero">
+  <header class="page-hero page-hero--image">
+    <div class="page-hero__bg">
+      <img src="/src/assets/img/fairgrounds-day-960.webp"
+           srcset="/src/assets/img/fairgrounds-day-480.webp 480w, /src/assets/img/fairgrounds-day-960.webp 960w, /src/assets/img/fairgrounds-day-1600.webp 1600w"
+           sizes="100vw" width="1600" height="1066" fetchpriority="high" decoding="async" alt="">
+    </div>
     <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
@@ -40,7 +45,7 @@
 
           <fieldset data-step data-step-title="Your gift">
             <legend tabindex="-1" data-step-heading>Choose where your gift goes</legend>
-            <div class="choice-grid">
+            <div class="choice-grid choice-grid--2">
               <label class="choice"><input type="radio" name="fund" value="scholarships"><span class="choice__label"><strong>Scholarships</strong><span>Academic scholarships for Lowcountry students, awarded each March.</span></span></label>
               <label class="choice"><input type="radio" name="fund" value="child-abuse-prevention"><span class="choice__label"><strong>Child Abuse Prevention</strong><span>Support for local partners such as the Dee Norton Child Advocacy Center.</span></span></label>
               <label class="choice"><input type="radio" name="fund" value="community-grants"><span class="choice__label"><strong>Fair Community Grants</strong><span>Grants to local nonprofits, alongside what the fair raises.</span></span></label>
@@ -141,6 +146,18 @@
         <p><strong>Every gift stays in the Lowcountry.</strong> Gifts and fair proceeds fund scholarships, community grants and child-abuse prevention.</p>
         <p class="club-note">Tax status and receipts: club to confirm</p>
       </aside>
+    </div>
+  </section>
+
+  <section class="section section--navy sealed" aria-labelledby="give-figure-title">
+    <!-- @include partials/seal.html -->
+    <div class="container">
+      <div class="statement">
+        <h2 class="visually-hidden" id="give-figure-title">In numbers</h2>
+        <p class="statement__figure">$11M+</p>
+        <p class="statement__text">returned to the Lowcountry since 2003. Every gift adds to that total.</p>
+        <p class="statement__note">Figures published by the Coastal Carolina Fair.</p>
+      </div>
     </div>
   </section>
 
