@@ -24,7 +24,7 @@ rather than hotlinked because the fair’s image server sends a 128 KB file even
 Facts come from the club’s live site (crawled 2026-09-11) and the Coastal Carolina Fair’s site. Anything
 that could not be verified is marked **Club to confirm** on the page. The club would need to supply:
 
-- Annual dues and the expected fair volunteer hours
+- Annual dues and the fair hours expected of members
 - The donation processor, tax status and receipts
 - Exchange Park Food Court hours
 - 2027 Family Festival / Triple B dates
